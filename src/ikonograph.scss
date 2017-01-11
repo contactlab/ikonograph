@@ -153,6 +153,7 @@ $icons-map: (
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  user-select: none;
 
   /* Better Font Rendering, only OS X Platforms =========== */
   -webkit-font-smoothing: antialiased;
