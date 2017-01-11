@@ -1,8 +1,5 @@
 # <img width="72" src="https://ux.contactlab.com/assets/img/product-brand.png">Ikonograph
 
-> The official **contactlab** icons library
-
-
 Ikonograph is the official Contactlab icons library. You can use it as npm/bower dependency, you have just to import the css file and you can start to add icons everywhere
 
 
