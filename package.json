@@ -1,7 +1,7 @@
 {
   "name": "ikonograph",
   "version": "1.0.0",
-  "description": "Font icon library by ContactLab",
+  "description": "Font icon library by Contactlab",
   "main": "gulpfile.babel.js",
   "directories": {
     "test": "test"
