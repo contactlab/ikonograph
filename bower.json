@@ -14,7 +14,6 @@
   ],
   "homepage": "https://github.com/contactlab/ikonograph",
   "ignore": [
-    "**/.*",
     "node_modules",
     "bower_components",
     "test",
