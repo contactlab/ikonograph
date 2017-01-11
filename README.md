@@ -18,8 +18,8 @@ Link the `css` file from your dependencies inside the page:
 
 You can also import the `.scss` source file and compile it within your [Sass](http://sass-lang.com/) project.
 
-```html
-<link rel="stylesheet" href="node_modules/ikonograph/src/ikonograph.scss">
+```scss
+@import 'node_modules/ikonograph/src/ikonograph.scss';
 ```
 
 
