@@ -13,7 +13,7 @@ import path from 'path';
 import paths from '../paths';
 
 
-gulp.task('svgs', () => {
+gulp.task('spriteSVG', () => {
   return gulp.src(`${paths.src}/svgs/*.svg`)
     .pipe(svgMin((file) => {
       var prefix = path.basename(file.relative, path.extname(file.relative));
@@ -44,9 +44,16 @@ gulp.task('testSVG', () => {
 });
 
 
+gulp.task('copySVG', function() {
+  gulp.src(`${paths.dist}/svgs.svg`)
+  .pipe(gulp.dest( './test' ));
+});
+
+
 gulp.task('svgs', () => {
   runSequence(
-    'svgs',
+    'spriteSVG',
+    'copySVG',
     'testSVG'
   );
 });
