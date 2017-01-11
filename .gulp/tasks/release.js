@@ -1,7 +1,7 @@
 'use strict';
 
 /*
- * > Build
+ * > Release
  */
 
 import gulp from 'gulp';
