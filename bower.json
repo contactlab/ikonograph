@@ -1,0 +1,23 @@
+{
+  "name": "ikonograph",
+  "description": "Font icon library by Contactlab",
+  "main": "dist/ikonograph.css",
+  "authors": [
+    "ContactLab"
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "contactlab",
+    "icon",
+    "library",
+    "font"
+  ],
+  "homepage": "https://github.com/contactlab/ikonograph",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
