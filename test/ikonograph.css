@@ -1,3 +1,13 @@
+/*
+ * ikonograph
+ * v1.0.0
+ * 
+ * Font icon library by ContactLab
+ * https://github.com/contactlab/ikonograph#readme
+ * 
+ * Apache-2.0 license
+ * Wed Jan 11 2017
+ */
 @charset "UTF-8";
 @font-face {
   font-family: 'contactlab-icons';
@@ -15,6 +25,10 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   /* Better Font Rendering, only OS X Platforms =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
