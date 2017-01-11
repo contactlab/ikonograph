@@ -12,7 +12,7 @@ import paths from '../paths';
 
 
 gulp.task('sass', () => {
-  return gulp.src(`${paths.scss}/icons.scss`)
+  return gulp.src(`${paths.src}/ikonograph.scss`)
   .pipe(gulpSass().on('error', gulpSass.logError))
   .pipe(postcss([ autoprefixer ]))
   .pipe(gulp.dest( paths.dist ));

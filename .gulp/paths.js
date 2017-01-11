@@ -4,7 +4,8 @@ import infos from '../package.json';
 const today = new Date()
 , paths = {
   'dist': './dist',
-  'scss': './scss',
+  'src': './src',
+  'scss': './src/scss',
   'banner': ['/*',
       ' * ' + infos.name,
       ' * v' + infos.version,
