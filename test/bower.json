@@ -1,0 +1,25 @@
+{
+  "name": "test",
+  "homepage": "https://github.com/contactlab/ikonograph",
+  "authors": [
+    "Mattia Astorino <astorino.design@gmail.com>"
+  ],
+  "description": "ikonograph test",
+  "main": "index.html",
+  "keywords": [
+    "ikonograph",
+    "test"
+  ],
+  "license": "Apache-2.0",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ikonograph": "https://github.com/contactlab/ikonograph.git"
+  }
+}
