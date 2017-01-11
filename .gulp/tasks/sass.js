@@ -13,7 +13,7 @@ import paths from '../paths';
 
 gulp.task('sass', () => {
   return gulp.src(`${paths.scss}/icons.scss`)
-  .pipe(gulpSass())
-  .pipe( postcss([ autoprefixer ]) )
+  .pipe(gulpSass().on('error', gulpSass.logError))
+  .pipe(postcss([ autoprefixer ]))
   .pipe(gulp.dest( paths.dist ));
 });
