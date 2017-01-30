@@ -12,10 +12,12 @@ Ikonograph is the official Contactlab icons library. You can use it as npm/bower
 
 ### Quick use
 
-Download the `.zip` package or install the Bower module 
+Download the `.zip` package or install via a package manager (Bower, Yarn or NPM):
 
 ```
 $ bower install ikonograph --save
+$ yarn add ikonograph
+$ npm install ikonograph --save
 ```
 
 Link the `css` file from your dependencies inside the page:
