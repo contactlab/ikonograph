@@ -1,13 +1,13 @@
 {
   "name": "ikonograph",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Font icon library by Contactlab",
-  "main": "gulpfile.babel.js",
+  "main": "./dist/ikonograph.min.css",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp"
   },
   "repository": {
     "type": "git",
