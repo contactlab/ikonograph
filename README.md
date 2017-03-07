@@ -12,16 +12,18 @@ Ikonograph is the official Contactlab icons library. You can use it as npm/bower
 
 ### Quick use
 
-Download .zip package or install the Bower module 
+Download the `.zip` package or install via a package manager (Bower, Yarn or NPM):
 
 ```
-$ bower install ikonograph
+$ bower install ikonograph --save
+$ yarn add ikonograph
+$ npm install ikonograph --save
 ```
 
 Link the `css` file from your dependencies inside the page:
 
 ```html
-<link rel="stylesheet" href="node_modules/ikonograph/dist/ikonograph.min.css">
+<link rel="stylesheet" href="bower_components/ikonograph/dist/ikonograph.min.css">
 ```
 
 Add the `clab-icon` css root class to your element and add the icon-related css class to display the relative icon:
