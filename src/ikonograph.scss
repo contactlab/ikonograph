@@ -134,19 +134,17 @@ $icons-map: (
 
 
 @font-face {
-  font-family: 'contactlab-icons';
-  src: url('../fonts/contactlab-icons.eot?end7rf');
-  src: url('../fonts/contactlab-icons.eot?end7rf#iefix') format('embedded-opentype'),
-    url('../fonts/contactlab-icons.ttf?end7rf') format('truetype'),
-    url('../fonts/contactlab-icons.woff?end7rf') format('woff'),
-    url('../fonts/contactlab-icons.svg?end7rf#contactlab-icons') format('svg');
+  font-family: 'ikonograph';
+  src: url('../fonts/ikonograph.woff2?nlksfa') format('woff2'),
+       url('../fonts/ikonograph.woff?nlksfa') format('woff'),
+       url('../fonts/ikonograph.ttf?nlksfa')  format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 .clab-icon {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'contactlab-icons' !important;
+  font-family: 'ikonograph' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
