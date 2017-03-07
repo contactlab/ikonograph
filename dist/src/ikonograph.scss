@@ -1,0 +1,38 @@
+@import "_icons";
+
+
+@font-face {
+  font-family: 'ikonograph';
+  src: url('../fonts/ikonograph.woff2?nlksfa') format('woff2'),
+       url('../fonts/ikonograph.woff?nlksfa') format('woff'),
+       url('../fonts/ikonograph.ttf?nlksfa')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.clab-icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'ikonograph' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  user-select: none;
+
+  /* Better Font Rendering, only OS X Platforms */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* $icons-map is defined inside _icons.scss */
+@each $icon, $icon-code in $icons-map {
+  .#{$icon} {
+    &::before {
+      content: $icon-code;
+    }
+  }
+}
+
+

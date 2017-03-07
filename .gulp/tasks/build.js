@@ -12,13 +12,13 @@ import runSequence from 'run-sequence';
 gulp.task('build', (cb) => {
   console.log('\n[build]'.bold.magenta + ' ⚙  Start bulding \n'.bold.blue);
   runSequence(
-    'clean',
+    'cleanDist',
+    'cleanTest',
     'sass',
-    'minify',
-    'header',
+    'svgs',
     (error) => {
       if (error) {
-        console.log('\n[build]'.bold.magenta + ' There was an issue building Material Theme:\n'.bold.red + error.message + '\n');
+        console.log('\n[build]'.bold.magenta + ' There was an issue building ikonograph:\n'.bold.red + error.message + '\n');
       } else {
         console.log('\n[build]'.bold.magenta + ' ✔  Build finished successfully \n'.bold.green);
       }

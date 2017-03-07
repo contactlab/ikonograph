@@ -14,6 +14,12 @@
   ],
   "homepage": "https://github.com/contactlab/ikonograph",
   "ignore": [
+    "src/",
+    ".gulp",
+    "gulpfile.babel.js",
+    "package.json",
+    "yarn.lock",
+    ".gitignore",
     "node_modules",
     "bower_components",
     "test",
