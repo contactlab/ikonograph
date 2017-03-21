@@ -5,12 +5,12 @@
   font-family: 'ikonograph';
   src: url('../fonts/ikonograph.woff2?nlksfa') format('woff2'),
        url('../fonts/ikonograph.woff?nlksfa') format('woff'),
-       url('../fonts/ikonograph.ttf?nlksfa')  format('truetype');
+       url('../fonts/ikonograph.ttf?nlksfa') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
-.clab-icon {
+.ikn {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'ikonograph' !important;
   speak: none;
