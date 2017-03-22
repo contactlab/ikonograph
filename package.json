@@ -1,7 +1,7 @@
 {
   "name": "ikonograph",
-  "version": "1.0.1",
-  "description": "Font icon library by Contactlab",
+  "version": "3.0.0",
+  "description": "Icons library by Contactlab",
   "main": "./dist/ikonograph.min.css",
   "directories": {
     "test": "test"
@@ -15,7 +15,7 @@
   },
   "keywords": [
     "contactlab",
-    "icon",
+    "icons",
     "library",
     "font"
   ],
