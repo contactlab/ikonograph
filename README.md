@@ -29,10 +29,10 @@ Link the `css` file from your dependencies inside the page:
 <link rel="stylesheet" href="bower_components/ikonograph/dist/ikonograph.min.css">
 ```
 
-Add the `clab-icon` css root class to your element and add the icon-related css class to display the relative icon:
+Add the css `ink-icon` root class to your element and add the `ikn-[name]` css class to display the relative icon:
 
 ```html
-<span class="clab-icon icon-[name]"></span>
+<span class="ikn ikn-users"></span>
 ```
 
 ### SVG Sprite
