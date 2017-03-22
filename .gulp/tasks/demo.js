@@ -16,6 +16,11 @@ gulp.task('cleanDemo', function () {
 });
 
 
+gulp.task('copySvg', function () {
+  gulp.src(`${paths.dist}/ikonograph.svg`)
+    .pipe(gulp.dest('./demo/svg'));
+});
+
 gulp.task('copyCSS', function () {
   gulp.src(`${paths.dist}/ikonograph.css`)
     .pipe(gulp.dest('./demo/ikonograph'));
@@ -31,6 +36,7 @@ gulp.task('copyFonts', function () {
 gulp.task('demo', () => {
   runSequence(
     'cleanDemo',
+    'copySvg',
     'copyCSS',
     'copyFonts'
   );
