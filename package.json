@@ -36,6 +36,7 @@
     "eslint-plugin-standard": "^2.0.1",
     "gulp": "^3.9.1",
     "gulp-bump": "^2.4.0",
+    "gulp-clean": "^0.3.2",
     "gulp-conventional-changelog": "^1.1.0",
     "gulp-cssnano": "^2.1.2",
     "gulp-header": "^1.8.8",

@@ -1,0 +1,37 @@
+'use strict';
+
+/*
+ * > Demo
+ */
+
+import gulp from 'gulp';
+import paths from '../paths';
+import runSequence from 'run-sequence';
+import clean from 'gulp-clean';
+
+
+gulp.task('cleanDemo', function () {
+  return gulp.src(['./demo/ikonograph', './demo/fonts'], { read: false })
+    .pipe(clean());
+});
+
+
+gulp.task('copyCSS', function () {
+  gulp.src(`${paths.dist}/ikonograph.css`)
+    .pipe(gulp.dest('./demo/ikonograph'));
+});
+
+
+gulp.task('copyFonts', function () {
+  gulp.src(`./fonts/*`)
+    .pipe(gulp.dest('./demo/fonts'));
+});
+
+
+gulp.task('demo', () => {
+  runSequence(
+    'cleanDemo',
+    'copyCSS',
+    'copyFonts'
+  );
+});
