@@ -10,6 +10,7 @@
   font-style: normal;
 }
 
+
 .ikn {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'ikonograph' !important;
@@ -25,6 +26,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 
 /* $icons-map is defined inside _icons.scss */
 @each $icon, $icon-code in $icons-map {
