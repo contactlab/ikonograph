@@ -1,8 +1,5 @@
 # Ikonograph
-<img width="24px" alt="Google Chrome" src="https://cdn.rawgit.com/alrra/browser-logos/2109c114/src/chrome/chrome_48x48.png">
-<img width="24px" alt="Firefox" src="https://cdn.rawgit.com/alrra/browser-logos/2109c114/src/firefox/firefox_48x48.png">
-<img width="24px" alt="Safari" src="https://cdn.rawgit.com/alrra/browser-logos/2109c114/src/safari/safari_48x48.png" title="💩">
-<img width="24px" alt="Microsoft Edge" src="https://cdn.rawgit.com/alrra/browser-logos/2109c114/src/edge/edge_48x48.png" title="💩">
+<img width="24px" alt="Google Chrome" src="https://cdn.rawgit.com/alrra/browser-logos/2109c114/src/chrome/chrome_48x48.png"><img width="24px" alt="Firefox" src="https://cdn.rawgit.com/alrra/browser-logos/2109c114/src/firefox/firefox_48x48.png"><img width="24px" alt="Safari" src="https://cdn.rawgit.com/alrra/browser-logos/2109c114/src/safari/safari_48x48.png" title="💩"><img width="24px" alt="Microsoft Edge" src="https://cdn.rawgit.com/alrra/browser-logos/2109c114/src/edge/edge_48x48.png" title="💩">
 
 Ikonograph is the official Contactlab icons library. You can use it as npm/bower dependency, you have just to import the css file and you can start to add icons everywhere.
 
@@ -32,18 +29,18 @@ Link the `css` file from your dependencies inside the page:
 <link rel="stylesheet" href="bower_components/ikonograph/dist/ikonograph.min.css">
 ```
 
-Add the `clab-icon` css root class to your element and add the icon-related css class to display the relative icon:
+Add the css `ink-icon` root class to your element and add the `ikn-[name]` css class to display the relative icon:
 
 ```html
-<span class="clab-icon icon-[name]"></span>
+<span class="ikn ikn-users"></span>
 ```
 
 ### SVG Sprite
-If you don't want to use the icon font you can choose to use the **svg-sprite** version of Ikonograph. SVG sprite is a set os svg symbols that you can import and use inside your html, read about [icon fonts vs svg](https://css-tricks.com/icon-fonts-vs-svg/) . 
+If you don't want to use the icon font you can choose to use the **svg-sprite** version of Ikonograph. SVG sprite is a set os svg symbols that you can import and use inside your html, read about [icon fonts vs svg](https://css-tricks.com/icon-fonts-vs-svg/) .
 
 There is 2 ways to use the SVG sprite
 
-#### As external resource 
+#### As external resource
 
 This is the new way to use **svg-sprite** icons, you don't have to include the sprite content inside your page, just link the source file inside the `<use>` tag:
 
@@ -71,6 +68,8 @@ You can now add icons everywhere:
 </svg>
 ```
 
+## Demo
+Run an `http-server` inside the demo folder. At the `/` path you will find a demo page of icon font and at `/svg` you will see the SVG's demo.
 
 ## How to use & Documentation
 For detailed instruction on how to use the Ikonograph library and the available icons refer to the [Contactlab Pattern Library documentation](https://ux.contactlab.com/#/design/iconography).
