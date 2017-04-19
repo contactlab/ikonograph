@@ -1,8 +1,5 @@
 # Ikonograph
-<img width="24px" alt="Google Chrome" src="https://cdn.rawgit.com/alrra/browser-logos/2109c114/src/chrome/chrome_48x48.png">
-<img width="24px" alt="Firefox" src="https://cdn.rawgit.com/alrra/browser-logos/2109c114/src/firefox/firefox_48x48.png">
-<img width="24px" alt="Safari" src="https://cdn.rawgit.com/alrra/browser-logos/2109c114/src/safari/safari_48x48.png" title="💩">
-<img width="24px" alt="Microsoft Edge" src="https://cdn.rawgit.com/alrra/browser-logos/2109c114/src/edge/edge_48x48.png" title="💩">
+<img width="24px" alt="Google Chrome" src="https://cdn.rawgit.com/alrra/browser-logos/2109c114/src/chrome/chrome_48x48.png"><img width="24px" alt="Firefox" src="https://cdn.rawgit.com/alrra/browser-logos/2109c114/src/firefox/firefox_48x48.png"><img width="24px" alt="Safari" src="https://cdn.rawgit.com/alrra/browser-logos/2109c114/src/safari/safari_48x48.png" title="💩"><img width="24px" alt="Microsoft Edge" src="https://cdn.rawgit.com/alrra/browser-logos/2109c114/src/edge/edge_48x48.png" title="💩">
 
 Ikonograph is the official Contactlab icons library. You can use it as npm/bower dependency, you have just to import the css file and you can start to add icons everywhere.
 
@@ -39,11 +36,11 @@ Add the `clab-icon` css root class to your element and add the icon-related css 
 ```
 
 ### SVG Sprite
-If you don't want to use the icon font you can choose to use the **svg-sprite** version of Ikonograph. SVG sprite is a set os svg symbols that you can import and use inside your html, read about [icon fonts vs svg](https://css-tricks.com/icon-fonts-vs-svg/) . 
+If you don't want to use the icon font you can choose to use the **svg-sprite** version of Ikonograph. SVG sprite is a set os svg symbols that you can import and use inside your html, read about [icon fonts vs svg](https://css-tricks.com/icon-fonts-vs-svg/) .
 
 There is 2 ways to use the SVG sprite
 
-#### As external resource 
+#### As external resource
 
 This is the new way to use **svg-sprite** icons, you don't have to include the sprite content inside your page, just link the source file inside the `<use>` tag:
 
