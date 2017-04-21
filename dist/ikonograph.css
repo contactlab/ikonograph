@@ -6,12 +6,12 @@
  * https://github.com/contactlab/ikonograph#readme
  * 
  * Apache-2.0 license
- * Wed Mar 22 2017
+ * Fri Apr 21 2017
  */
 @charset "UTF-8";
 @font-face {
   font-family: 'ikonograph';
-  src: url("../fonts/ikonograph.woff2?nlksfa") format("woff2"), url("../fonts/ikonograph.woff?nlksfa") format("woff"), url("../fonts/ikonograph.ttf?nlksfa") format("truetype");
+  src: url("fonts/ikonograph.woff2?nlksfa") format("woff2"), url("fonts/ikonograph.woff?nlksfa") format("woff"), url("fonts/ikonograph.ttf?nlksfa") format("truetype");
   font-weight: normal;
   font-style: normal; }
 

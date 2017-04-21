@@ -7,6 +7,7 @@
 import gulp from 'gulp';
 import colors from 'colors';
 import runSequence from 'run-sequence';
+import paths from '../paths';
 
 
 gulp.task('build', (cb) => {
@@ -15,6 +16,7 @@ gulp.task('build', (cb) => {
     'cleanDist',
     'cleanTest',
     'sass',
+    'fonts',
     'svgs',
     'demo',
     (error) => {
@@ -26,4 +28,10 @@ gulp.task('build', (cb) => {
       cb(error);
     }
   );
+});
+
+
+gulp.task('fonts', function () {
+  gulp.src(`${paths.src}/fonts/*`)
+    .pipe(gulp.dest('./dist/fonts'));
 });
