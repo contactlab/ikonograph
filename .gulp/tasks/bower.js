@@ -9,6 +9,6 @@ import paths from '../paths';
 
 
 gulp.task('bower', function () {
-  gulp.src('bower_components/*')
+  gulp.src('bower_components/**/*')
     .pipe(gulp.dest(`${paths.dist}/bower_components`));
 });

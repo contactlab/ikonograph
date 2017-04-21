@@ -19,6 +19,7 @@ gulp.task('build', (cb) => {
     'fonts',
     'svgs',
     'bower',
+    'polymer',
     'demo',
     (error) => {
       if (error) {

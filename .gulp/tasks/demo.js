@@ -33,8 +33,13 @@ gulp.task('copyFonts', function () {
 });
 
 gulp.task('copyBower', function () {
-  gulp.src('bower_components/*')
+  gulp.src('bower_components/**/*')
     .pipe(gulp.dest('./demo/bower_components'));
+});
+
+gulp.task('copyPolymerFile', function () {
+  gulp.src(`${paths.src}/ikonograph.html`)
+    .pipe(gulp.dest('./demo/ikonograph'));
 });
 
 gulp.task('demo', () => {
@@ -43,6 +48,7 @@ gulp.task('demo', () => {
     'copySvg',
     'copyCSS',
     'copyFonts',
-    'copyBower'
+    'copyBower',
+    'copyPolymerFile'
   );
 });

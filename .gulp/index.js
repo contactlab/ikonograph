@@ -8,6 +8,7 @@ import './tasks/bump';
 import './tasks/changelog';
 import './tasks/release';
 import './tasks/sprite-svg';
+import './tasks/polymer';
 import './tasks/fonts';
 import './tasks/bower';
 import './tasks/demo';
