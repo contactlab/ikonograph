@@ -18,6 +18,7 @@ gulp.task('build', (cb) => {
     'sass',
     'fonts',
     'svgs',
+    'bower',
     'demo',
     (error) => {
       if (error) {
@@ -28,10 +29,4 @@ gulp.task('build', (cb) => {
       cb(error);
     }
   );
-});
-
-
-gulp.task('fonts', function () {
-  gulp.src(`${paths.src}/fonts/*`)
-    .pipe(gulp.dest('./dist/fonts'));
 });

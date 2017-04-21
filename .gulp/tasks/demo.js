@@ -32,12 +32,17 @@ gulp.task('copyFonts', function () {
     .pipe(gulp.dest('./demo/ikonograph/fonts'));
 });
 
+gulp.task('copyBower', function () {
+  gulp.src('bower_components/*')
+    .pipe(gulp.dest('./demo/bower_components'));
+});
 
 gulp.task('demo', () => {
   runSequence(
     'cleanDemo',
     'copySvg',
     'copyCSS',
-    'copyFonts'
+    'copyFonts',
+    'copyBower'
   );
 });
