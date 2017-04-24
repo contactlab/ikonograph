@@ -1,12 +1,6 @@
 <a name="3.0.0"></a>
-# [3.0.0](https://github.com/contactlab/ikonograph/compare/v2.0.0...v3.0.0) (2017-03-22)
+# [3.0.0](https://github.com/contactlab/ikonograph/compare/v2.0.0...v3.0.0) (2017-04-24)
 
-### Bug Fixes
-
-### Features
-
-* New icons and names
-* Remove all Contactlab references and make Ikonograph completely stand-alone
 
 
 <a name="2.0.0"></a>
