@@ -25,7 +25,8 @@
     "demo/",
     ".scss-lint.yml",
     ".eslintrc.yml",
-    ".editorconfig"
+    ".editorconfig",
+    ".babelrc"
   ],
   "dependencies": {
     "iron-icon": "PolymerElements/iron-icon#^1.0.13",
