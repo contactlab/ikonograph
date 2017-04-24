@@ -1,25 +1,23 @@
 <img src="http://i.imgur.com/BMANwPS.jpg" width="589">
 
-# Ikonograph
 <img width="24px" alt="Google Chrome" src="https://cdn.rawgit.com/alrra/browser-logos/2109c114/src/chrome/chrome_48x48.png"><img width="24px" alt="Firefox" src="https://cdn.rawgit.com/alrra/browser-logos/2109c114/src/firefox/firefox_48x48.png"><img width="24px" alt="Safari" src="https://cdn.rawgit.com/alrra/browser-logos/2109c114/src/safari/safari_48x48.png" title="💩"><img width="24px" alt="Microsoft Edge" src="https://cdn.rawgit.com/alrra/browser-logos/2109c114/src/edge/edge_48x48.png" title="💩">
 
 Ikonograph is the official Contactlab icons library. You can use it as npm/bower dependency, you have just to import the css file and you can start to add icons everywhere.
 
 <!-- TOC -->
 
-- [Ikonograph](#ikonograph)
-  - [Installation](#installation)
-    - [Required tools](#required-tools)
-  - [Quick use](#quick-use)
-    - [Icon Font](#icon-font)
-    - [SVG Sprite](#svg-sprite)
-      - [As external resource](#as-external-resource)
-      - [By inclusion (the old way)](#by-inclusion-the-old-way)
-    - [Polymer iconset](#polymer-iconset)
-  - [Demo](#demo)
-  - [How to use & Documentation](#how-to-use--documentation)
-  - [Git branching policies](#git-branching-policies)
-  - [License](#license)
+- [Installation](#installation)
+  - [Required tools](#required-tools)
+- [Quick use](#quick-use)
+  - [Icon Font](#icon-font)
+  - [SVG Sprite](#svg-sprite)
+    - [As external resource](#as-external-resource)
+    - [By inclusion (the old way)](#by-inclusion-the-old-way)
+  - [Polymer iconset](#polymer-iconset)
+- [Demo](#demo)
+- [How to use & Documentation](#how-to-use--documentation)
+- [Git branching policies](#git-branching-policies)
+- [License](#license)
 
 <!-- /TOC -->
 
