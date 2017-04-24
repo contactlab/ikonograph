@@ -1,8 +1,25 @@
-# Ikonograph
+<img src="http://i.imgur.com/BMANwPS.jpg" width="589">
+
 <img width="24px" alt="Google Chrome" src="https://cdn.rawgit.com/alrra/browser-logos/2109c114/src/chrome/chrome_48x48.png"><img width="24px" alt="Firefox" src="https://cdn.rawgit.com/alrra/browser-logos/2109c114/src/firefox/firefox_48x48.png"><img width="24px" alt="Safari" src="https://cdn.rawgit.com/alrra/browser-logos/2109c114/src/safari/safari_48x48.png" title="💩"><img width="24px" alt="Microsoft Edge" src="https://cdn.rawgit.com/alrra/browser-logos/2109c114/src/edge/edge_48x48.png" title="💩">
 
 Ikonograph is the official Contactlab icons library. You can use it as npm/bower dependency, you have just to import the css file and you can start to add icons everywhere.
 
+<!-- TOC -->
+
+- [Installation](#installation)
+  - [Required tools](#required-tools)
+- [Quick use](#quick-use)
+  - [Icon Font](#icon-font)
+  - [SVG Sprite](#svg-sprite)
+    - [As external resource](#as-external-resource)
+    - [By inclusion (the old way)](#by-inclusion-the-old-way)
+  - [Polymer iconset (only bower)](#polymer-iconset-only-bower)
+- [Demo](#demo)
+- [How to use & Documentation](#how-to-use--documentation)
+- [Git branching policies](#git-branching-policies)
+- [License](#license)
+
+<!-- /TOC -->
 
 ## Installation
 
@@ -10,8 +27,6 @@ Ikonograph is the official Contactlab icons library. You can use it as npm/bower
 - [NodeJS](https://nodejs.org/)
 - [Bower](https://bower.io/) (```$ npm install -g bower```)
 - [Gulp](http://gulpjs.com) (```$ npm install -g gulp-cli``` and ```npm install --save-dev gulp```) (only for development)
-
-## Quick use
 
 Download the `.zip` package or install via a package manager (Bower, Yarn or NPM):
 
@@ -21,12 +36,14 @@ $ yarn add ikonograph
 $ npm install ikonograph --save
 ```
 
-Link the `css` file from your dependencies inside the page:
+## Quick use
+
+You can use Ikonograph by icon font, svg sprite, or [iconset-svg](https://github.com/PolymerElements/iron-iconset-svg) library for Polymer.
 
 ### Icon Font
 
 ```html
-<link rel="stylesheet" href="bower_components/ikonograph/dist/ikonograph.min.css">
+<link rel="stylesheet" href="bower_components/ikonograph/dist/ikonograph.css">
 ```
 
 Add the css `ink-icon` root class to your element and add the `ikn-[name]` css class to display the relative icon:
@@ -46,7 +63,7 @@ This is the new way to use **svg-sprite** icons, you don't have to include the s
 
 ```html
 <svg width="24" height="24">
-	<use xlink:href="path/to/ikonograph.svg#agenda"></use>
+  <use xlink:href="path/to/ikonograph.svg#agenda"></use>
 </svg>
 ```
 
@@ -64,9 +81,21 @@ You have to grab the `ikonograph.svg` file content and put it inside your main `
 You can now add icons everywhere:
 ```html
 <svg width="24" height="24">
-	<use xlink:href="#[icon-name]"></use>
+  <use xlink:href="#[icon-name]"></use>
 </svg>
 ```
+
+### Polymer iconset (only bower)
+Import the `ikonograph.html` element inside your file:
+```html
+<link rel="import" href="bower_components/ikonograph/dist/ikonograph.html">
+```
+
+Use the `iron-icon` element to display the icon by adding the iconset name and the icon name:
+```html
+<iron-icon icon="ikonograph:agenda"></iron-icon>
+```
+
 
 ## Demo
 Run an `http-server` inside the demo folder. At the `/` path you will find a demo page of icon font and at `/svg` you will see the SVG's demo.

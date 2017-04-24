@@ -14,12 +14,10 @@ gulp.task('build', (cb) => {
   console.log('\n[build]'.bold.magenta + ' ⚙  Start bulding \n'.bold.blue);
   runSequence(
     'cleanDist',
-    'cleanTest',
     'sass',
     'fonts',
     'svgs',
-    'bower',
-    'polymer',
+    'polymer-iconset',
     'demo',
     (error) => {
       if (error) {
