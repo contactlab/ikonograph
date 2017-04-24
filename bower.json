@@ -22,8 +22,7 @@
     ".gitignore",
     "node_modules",
     "bower_components",
-    "test",
-    "tests"
+    "demo"
   ],
   "dependencies": {
     "iron-icon": "PolymerElements/iron-icon#^1.0.13",
