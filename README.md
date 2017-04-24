@@ -53,7 +53,7 @@ Add the css `ink-icon` root class to your element and add the `ikn-[name]` css c
 ```
 
 ### SVG Sprite
-If you don't want to use the icon font you can choose to use the **svg-sprite** version of Ikonograph. SVG sprite is a set os svg symbols that you can import and use inside your html, read about [icon fonts vs svg](https://css-tricks.com/icon-fonts-vs-svg/) .
+If you don't want to use the icon font you can choose to use the **svg-sprite** version of Ikonograph. SVG sprite is a set of svg symbols that you can import and use inside your html, read about [icon fonts vs svg](https://css-tricks.com/icon-fonts-vs-svg/) .
 
 There is 2 ways to use the SVG sprite
 
@@ -98,7 +98,10 @@ Use the `iron-icon` element to display the icon by adding the iconset name and t
 
 
 ## Demo
-Run an `http-server` inside the demo folder. At the `/` path you will find a demo page of icon font and at `/svg` you will see the SVG's demo.
+Run an `http-server` inside the demo folder.
+- Navigate to `/` path to check the icon font demo
+- Navigate to `/svg` to check che svg sprite demo
+- Navigate to `/polymer` to check che iron-iconset-svg sprite demo
 
 ## How to use & Documentation
 For detailed instruction on how to use the Ikonograph library and the available icons refer to the [Contactlab Pattern Library documentation](https://ux.contactlab.com/#/design/iconography).
