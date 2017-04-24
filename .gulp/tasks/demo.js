@@ -11,25 +11,30 @@ import clean from 'gulp-clean';
 
 
 gulp.task('cleanDemo', function () {
-  return gulp.src(['./demo/ikonograph', './demo/fonts'], { read: false })
+  return gulp.src(['./demo/bower_components/ikonograph'], { read: false })
     .pipe(clean());
 });
 
 
 gulp.task('copySvg', function () {
   gulp.src(`${paths.dist}/ikonograph.svg`)
-    .pipe(gulp.dest('./demo/ikonograph'));
+    .pipe(gulp.dest('./demo/bower_components/ikonograph/dist'));
 });
 
 gulp.task('copyCSS', function () {
   gulp.src(`${paths.dist}/ikonograph.css`)
-    .pipe(gulp.dest('./demo/ikonograph'));
+    .pipe(gulp.dest('./demo/bower_components/ikonograph/dist'));
 });
 
 
 gulp.task('copyFonts', function () {
   gulp.src(`${paths.src}/fonts/*`)
-    .pipe(gulp.dest('./demo/ikonograph/fonts'));
+    .pipe(gulp.dest('./demo/bower_components/ikonograph/dist/fonts'));
+});
+
+gulp.task('copyPolymerFile', function () {
+  gulp.src(`${paths.dist}/ikonograph.html`)
+    .pipe(gulp.dest('./demo/bower_components/ikonograph/dist'));
 });
 
 gulp.task('copyBower', function () {
@@ -37,18 +42,14 @@ gulp.task('copyBower', function () {
     .pipe(gulp.dest('./demo/bower_components'));
 });
 
-gulp.task('copyPolymerFile', function () {
-  gulp.src(`${paths.dist}/ikonograph.html`)
-    .pipe(gulp.dest('./demo/ikonograph'));
-});
 
 gulp.task('demo', () => {
   runSequence(
     'cleanDemo',
+    'copyBower',
     'copySvg',
     'copyCSS',
     'copyFonts',
-    'copyBower',
     'copyPolymerFile'
   );
 });
