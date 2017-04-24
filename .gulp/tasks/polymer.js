@@ -14,8 +14,6 @@ gulp.task('polymer-iconset', function () {
     .pipe(polymerIconset({
       iconSetName: 'ikonograph',
       iconSize: 24,
-      ironIconPath: '../bower_components/iron-icon/iron-icon.html',
-      ironIconsetSvgPath: '../bower_components/iron-iconset-svg/iron-iconset-svg.html',
       iconId: function (file) {
         return path.basename(file.path, '.svg');
       },

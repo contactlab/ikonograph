@@ -38,7 +38,7 @@ gulp.task('copyBower', function () {
 });
 
 gulp.task('copyPolymerFile', function () {
-  gulp.src(`${paths.src}/ikonograph.html`)
+  gulp.src(`${paths.dist}/ikonograph.html`)
     .pipe(gulp.dest('./demo/ikonograph'));
 });
 
