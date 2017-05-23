@@ -742,7 +742,7 @@
         "isMulticolor2": false,
         "grid": 0,
         "tags": [
-          "close-sircle"
+          "close-circle"
         ]
       },
       "attrs": [
@@ -752,7 +752,7 @@
       "properties": {
         "order": 294,
         "id": 96,
-        "name": "close-sircle",
+        "name": "close-circle",
         "prevSize": 24,
         "code": 59671
       },
