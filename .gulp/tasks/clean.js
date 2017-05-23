@@ -15,10 +15,3 @@ gulp.task('cleanDist', () => {
     `${paths.dist}`,
   ]);
 });
-
-
-gulp.task('cleanTest', () => {
-  return del([
-    './test/svgs.svg',
-  ]);
-});

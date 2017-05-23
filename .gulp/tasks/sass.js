@@ -19,16 +19,9 @@ gulp.task('convertSass', () => {
   .pipe(gulp.dest( paths.dist ));
 });
 
-gulp.task('copySass', function() {
-  gulp.src([`${paths.src}/ikonograph.scss`, `${paths.src}/_icons.scss`])
-  .pipe(gulp.dest( `${paths.dist}/src` ));
-});
-
-
 gulp.task('sass', () => {
   runSequence(
     'convertSass',
-    'copySass',
     'minify',
     'header'
   );

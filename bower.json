@@ -22,7 +22,14 @@
     ".gitignore",
     "node_modules",
     "bower_components",
-    "test",
-    "tests"
-  ]
+    "demo/",
+    ".scss-lint.yml",
+    ".eslintrc.yml",
+    ".editorconfig",
+    ".babelrc"
+  ],
+  "dependencies": {
+    "iron-icon": "PolymerElements/iron-icon#^1.0.13",
+    "iron-iconset-svg": "PolymerElements/iron-iconset-svg#^1.1.1"
+  }
 }
