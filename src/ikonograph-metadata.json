@@ -875,7 +875,7 @@
         "isMulticolor2": false,
         "grid": 0,
         "tags": [
-          "dashborad"
+          "dashboard"
         ]
       },
       "attrs": [
@@ -889,7 +889,7 @@
       "properties": {
         "order": 298,
         "id": 92,
-        "name": "dashborad",
+        "name": "dashboard",
         "prevSize": 24,
         "code": 59675
       },
