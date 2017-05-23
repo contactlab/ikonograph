@@ -3592,7 +3592,7 @@
         "isMulticolor2": false,
         "grid": 0,
         "tags": [
-          "tabled"
+          "tablet"
         ]
       },
       "attrs": [
@@ -3603,7 +3603,7 @@
       "properties": {
         "order": 380,
         "id": 10,
-        "name": "tabled",
+        "name": "tablet",
         "prevSize": 24,
         "code": 59757
       },
