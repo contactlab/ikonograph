@@ -1,5 +1,13 @@
-<a name="3.0.0"></a>
-# [3.0.0](https://github.com/contactlab/ikonograph/compare/v2.0.0...v3.0.0) (2017-04-24)
+<a name="3.1.0"></a>
+# [3.1.0](https://github.com/contactlab/ikonograph/compare/v3.0.0...v3.1.0) (2017-07-19)
+
+
+### Bug Fixes
+
+* Add gliph icons version ([df07aad](https://github.com/contactlab/ikonograph/commit/df07aad)), closes [#25](https://github.com/contactlab/ikonograph/issues/25)
+* Fix close-circle icon name ([585f0d1](https://github.com/contactlab/ikonograph/commit/585f0d1))
+* Fix dashboard icon name ([af59b8f](https://github.com/contactlab/ikonograph/commit/af59b8f))
+* Fix tablet icon name ([4d4fa9e](https://github.com/contactlab/ikonograph/commit/4d4fa9e))
 
 
 
