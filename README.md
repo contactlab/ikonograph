@@ -7,14 +7,12 @@ Ikonograph is the official Contactlab icons library. You can use it as npm/bower
 <!-- TOC -->
 
 - [Installation](#installation)
-  - [Required tools](#required-tools)
 - [Quick use](#quick-use)
   - [Icon Font](#icon-font)
   - [SVG Sprite](#svg-sprite)
     - [As external resource](#as-external-resource)
     - [By inclusion (the old way)](#by-inclusion-the-old-way)
   - [Polymer iconset (only bower)](#polymer-iconset-only-bower)
-- [Demo](#demo)
 - [How to use & Documentation](#how-to-use--documentation)
 - [Git branching policies](#git-branching-policies)
 - [License](#license)
@@ -22,11 +20,6 @@ Ikonograph is the official Contactlab icons library. You can use it as npm/bower
 <!-- /TOC -->
 
 ## Installation
-
-### Required tools
-- [NodeJS](https://nodejs.org/)
-- [Bower](https://bower.io/) (```$ npm install -g bower```)
-- [Gulp](http://gulpjs.com) (```$ npm install -g gulp-cli``` and ```npm install --save-dev gulp```) (only for development)
 
 Download the `.zip` package or install via a package manager (Bower, Yarn or NPM):
 
@@ -95,13 +88,6 @@ Use the `iron-icon` element to display the icon by adding the iconset name and t
 ```html
 <iron-icon icon="ikonograph:agenda"></iron-icon>
 ```
-
-
-## Demo
-Run an `http-server` inside the demo folder.
-- Navigate to `/` path to check the icon font demo
-- Navigate to `/svg` to check che svg sprite demo
-- Navigate to `/polymer` to check che iron-iconset-svg sprite demo
 
 ## How to use & Documentation
 For detailed instruction on how to use the Ikonograph library and the available icons refer to the [Contactlab Pattern Library documentation](https://ux.contactlab.com/#/design/iconography).
