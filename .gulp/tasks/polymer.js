@@ -12,7 +12,7 @@ import polymerIconset from 'gulp-polymer-iconset';
 gulp.task('polymer-iconset', function () {
   return gulp.src(`${paths.src}/svgs/**/*`)
     .pipe(polymerIconset({
-      iconSetName: 'ikonograph',
+      iconsetName: 'ikonograph',
       iconSize: 24,
       ironIconPath: '../../iron-icon/iron-icon.html',
       ironIconsetSvgPath: '../../iron-iconset-svg/iron-iconset-svg.html',
