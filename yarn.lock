@@ -2139,6 +2139,13 @@ gulp-cssnano@^2.1.2:
     object-assign "^4.0.1"
     vinyl-sourcemaps-apply "^0.2.1"
 
+gulp-files-to-json@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/gulp-files-to-json/-/gulp-files-to-json-0.2.1.tgz#1064e412170e9ce47fc0d7ee8b76e1d32b8faee6"
+  dependencies:
+    gulp-util "^3.0.1"
+    through "^2.3.6"
+
 gulp-header@^1.8.9:
   version "1.8.9"
   resolved "https://registry.yarnpkg.com/gulp-header/-/gulp-header-1.8.9.tgz#c9f10fee0632d81e939789c6ecf45a151bf3098b"
@@ -2174,7 +2181,7 @@ gulp-match@^1.0.3:
   dependencies:
     minimatch "^3.0.3"
 
-gulp-polymer-iconset@^1.0.2:
+gulp-polymer-iconset@1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/gulp-polymer-iconset/-/gulp-polymer-iconset-1.0.2.tgz#628da600f76f20d02c07fedc763e7dd3b889bf61"
   dependencies:
@@ -2228,7 +2235,7 @@ gulp-svgstore@^6.1.0:
     cheerio "0.*"
     gulp-util "^3.0.0"
 
-gulp-util@*, gulp-util@^3.0, gulp-util@^3.0.0, gulp-util@^3.0.4, gulp-util@^3.0.6, gulp-util@^3.0.7, gulp-util@^3.0.8:
+gulp-util@*, gulp-util@^3.0, gulp-util@^3.0.0, gulp-util@^3.0.1, gulp-util@^3.0.4, gulp-util@^3.0.6, gulp-util@^3.0.7, gulp-util@^3.0.8:
   version "3.0.8"
   resolved "https://registry.yarnpkg.com/gulp-util/-/gulp-util-3.0.8.tgz#0054e1e744502e27c04c187c3ecc505dd54bbb4f"
   dependencies:
