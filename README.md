@@ -12,7 +12,7 @@ Ikonograph is the official Contactlab icons library. You can use it as npm/bower
   - [SVG Sprite](#svg-sprite)
     - [As external resource](#as-external-resource)
     - [By inclusion (the old way)](#by-inclusion-the-old-way)
-  - [Polymer iconset (only bower)](#polymer-iconset-only-bower)
+  - [Web Component iconset](#web-component-iconset)
 - [How to use & Documentation](#how-to-use--documentation)
 - [Git branching policies](#git-branching-policies)
 - [License](#license)
@@ -77,7 +77,7 @@ You can now add icons everywhere:
 </svg>
 ```
 
-### Webcomponent iconset
+### Web Component iconset
 Import the `ikonograph.js` component inside your file:
 ```html
 <script src="path/to/ikonograph/dist/ikonograph.js">

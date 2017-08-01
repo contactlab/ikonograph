@@ -45,11 +45,11 @@ class IkonographIcon extends HTMLElement {
     return `
       svg {
         display: inline-block;
-        width: ${width}px;
-        height: ${width}px;
+        width: ${width};
+        height: ${width};
         stroke-width: 0;
-        stroke: #000;
-        fill: #000;
+        stroke: currentColor;
+        fill: currentColor;
       }
     `;
   }
