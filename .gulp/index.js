@@ -8,10 +8,9 @@ import './tasks/bump';
 import './tasks/changelog';
 import './tasks/release';
 import './tasks/sprite-svg';
-import './tasks/polymer';
 import './tasks/fonts';
-import './tasks/demo';
 import './tasks/svg';
+import './tasks/replace';
 
 // export default script
 export default ['build'];
