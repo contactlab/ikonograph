@@ -15,23 +15,23 @@ class IkonographIcon extends HTMLElement {
 
     this.attributeChangeManager = {
       'icon': value => this._setIcon(value),
-      'size': value => this._setSize(value)
+      'width': value => this._setWidth(value)
     };
   }
 
   static get observedAttributes() {
-    return ['size', 'icon'];
+    return ['width', 'icon'];
   }
 
   connectedCallback() {
     const iconName = this.getAttribute('icon');
-    const size = this.getAttribute('size');
+    const width = this.getAttribute('width');
 
     const svgElement = new DOMParser().parseFromString(ICONS_SVG[iconName], MIME_TYPE);
-    this._setSVGDImensions(svgElement.querySelector('svg'), size);
+    this._setSVGDImensions(svgElement.querySelector('svg'), width);
     this.shadow.appendChild(svgElement.documentElement);
 
-    this.styleElement.innerHTML = this._svgStyleString(size);
+    this.styleElement.innerHTML = this._svgStyleString(width);
     this.shadow.appendChild(this.styleElement);
   }
 
@@ -39,7 +39,7 @@ class IkonographIcon extends HTMLElement {
     this.attributeChangeManager[attributeName](newValue);
   }
 
-  _svgStyleString(size) {
+  _svgStyleString(width) {
     return `
       :host {
         display: -webkit-inline-box;
@@ -51,8 +51,8 @@ class IkonographIcon extends HTMLElement {
 
       svg {
         display: block;
-        size: ${size || '24px' };
-        height: ${size || '24px' };
+        size: ${width || '24px' };
+        height: ${width || '24px' };
         stroke-size: 0;
         stroke: currentColor;
         fill: currentColor;
@@ -60,9 +60,9 @@ class IkonographIcon extends HTMLElement {
     `;
   }
 
-  _setSVGDImensions(element, size) {
-    element.setAttribute('width', size);
-    element.setAttribute('height', size);
+  _setSVGDImensions(element, width) {
+    element.setAttribute('width', width);
+    element.setAttribute('height', width);
   }
 
   _setIcon(value) {
@@ -71,14 +71,14 @@ class IkonographIcon extends HTMLElement {
       this.shadow.removeChild(currentSVGChild);
       const svgElement = new DOMParser().parseFromString(ICONS_SVG[value], MIME_TYPE);
 
-      const size = this.getAttribute('size');
-      this._setSVGDImensions(svgElement.querySelector('svg'), size);
+      const width = this.getAttribute('width');
+      this._setSVGDImensions(svgElement.querySelector('svg'), width);
 
       this.shadow.appendChild(svgElement.documentElement);
     }
   }
 
-  _setSize(value) {
+  _setWidth(value) {
     const currentSVGChild = this.shadow.querySelector('svg');
     if (currentSVGChild) {
       this._setSVGDImensions(currentSVGChild, value);
