@@ -17,23 +17,25 @@ class IkonographIcon extends HTMLElement {
 
     this.attributeChangeManager = {
       'icon': value => this._setIcon(value),
-      'width': value => this._setWidth(value)
+      'size': value => this._setSize(value)
     };
   }
 
   static get observedAttributes() {
-    return ['width', 'icon'];
+    return ['size', 'icon'];
   }
 
   connectedCallback() {
     const iconName = this.getAttribute('icon');
-    const width = this.getAttribute('width');
+    const size = this.getAttribute('size') || '100%';
 
     const svgElement = new DOMParser().parseFromString(ICONS_SVG[iconName], MIME_TYPE);
-    this._setSVGDImensions(svgElement.querySelector('svg'), width);
+    svgElement.documentElement.removeAttribute('width');
+    svgElement.documentElement.removeAttribute('height');
+
     this.shadow.appendChild(svgElement.documentElement);
 
-    this.styleElement.innerHTML = this._svgStyleString(width);
+    this.styleElement.innerHTML = this._svgStyleString(size);
     this.shadow.appendChild(this.styleElement);
   }
 
@@ -41,7 +43,7 @@ class IkonographIcon extends HTMLElement {
     this.attributeChangeManager[attributeName](newValue);
   }
 
-  _svgStyleString(width) {
+  _svgStyleString(size) {
     return `
       :host {
         display: -webkit-inline-box;
@@ -49,12 +51,14 @@ class IkonographIcon extends HTMLElement {
         display: inline-flex;
         contain: content;
         pointer-events: auto;
+        width: ${size};
+        height: ${size};
       }
 
       svg {
         display: block;
-        width: ${width};
-        height: ${width};
+        width: 100%;
+        height: 100%;
         stroke-width: 0;
         stroke: currentColor;
         fill: currentColor;
@@ -62,30 +66,20 @@ class IkonographIcon extends HTMLElement {
     `;
   }
 
-  _setSVGDImensions(element, width) {
-    element.setAttribute('width', width);
-    element.setAttribute('height', width);
-  }
-
   _setIcon(value) {
     const currentSVGChild = this.shadow.querySelector('svg');
     if (currentSVGChild) {
       this.shadow.removeChild(currentSVGChild);
       const svgElement = new DOMParser().parseFromString(ICONS_SVG[value], MIME_TYPE);
-
-      const width = this.getAttribute('width');
-      this._setSVGDImensions(svgElement.querySelector('svg'), width);
+      svgElement.documentElement.removeAttribute('width');
+      svgElement.documentElement.removeAttribute('height');
 
       this.shadow.appendChild(svgElement.documentElement);
     }
   }
 
-  _setWidth(value) {
-    const currentSVGChild = this.shadow.querySelector('svg');
-    if (currentSVGChild) {
-      this._setSVGDImensions(currentSVGChild, value);
-      this.styleElement.innerHTML = this._svgStyleString(value);
-    }
+  _setSize(value) {
+    this.styleElement.innerHTML = this._svgStyleString(value);
   }
 }
 
