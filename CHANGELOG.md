@@ -1,5 +1,15 @@
+<a name="4.0.0"></a>
+# [4.0.0](https://github.com/contactlab/ikonograph/compare/v3.1.0...v4.0.0) (2017-08-01)
+
+
+### Features
+
+* New ikn-icon CustomElement ([8b1a1b6](https://github.com/contactlab/ikonograph/commit/8b1a1b6))
+
+
+
 <a name="3.1.0"></a>
-# [3.1.0](https://github.com/contactlab/ikonograph/compare/v3.0.0...v3.1.0) (2017-07-19)
+# [3.1.0](https://github.com/contactlab/ikonograph/compare/v3.0.0...v3.1.0) (2017-07-21)
 
 
 ### Bug Fixes
@@ -22,9 +32,9 @@
 
 ### Features
 
-* Add sprite SVG ([6a53289](https://github.com/contactlab/ikonograph/commit/6a53289))
 * **builder:** Add SVG's sprite generator ([543fcd4](https://github.com/contactlab/ikonograph/commit/543fcd4))
 * Add SVG sprite ([f44dd85](https://github.com/contactlab/ikonograph/commit/f44dd85))
+* Add sprite SVG ([6a53289](https://github.com/contactlab/ikonograph/commit/6a53289))
 * Add svg-sprite version ([e3f037e](https://github.com/contactlab/ikonograph/commit/e3f037e))
 
 
