@@ -11,6 +11,7 @@ import './tasks/sprite-svg';
 import './tasks/fonts';
 import './tasks/svg';
 import './tasks/replace';
+import './tasks/compress';
 
 // export default script
 export default ['build'];
