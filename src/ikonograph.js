@@ -43,6 +43,12 @@ class IkonographIcon extends HTMLElement {
 
   _svgStyleString(width) {
     return `
+      :host {
+        display: inline-flex;
+        contain: content;
+        pointer-events: auto;
+      }
+
       svg {
         display: inline-block;
         width: ${width};
