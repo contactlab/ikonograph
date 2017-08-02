@@ -51,9 +51,9 @@ class IkonographIcon extends HTMLElement {
 
       svg {
         display: block;
-        size: ${width || '24px' };
-        height: ${width || '24px' };
-        stroke-size: 0;
+        size: ${width};
+        height: ${width};
+        stroke-width: 0;
         stroke: currentColor;
         fill: currentColor;
       }
