@@ -18,8 +18,6 @@ class IkonographIcon extends HTMLElement {
       mode: 'open'
     });
 
-    this.styleElement = document.createElement('style');
-
     this.attributeChangeManager = {};
     this.attributeChangeManager[ICON_ATTR] = value => this._setIcon(value);
     this.attributeChangeManager[SIZE_ATTR] = value => this._setSize(value);
@@ -35,16 +33,16 @@ class IkonographIcon extends HTMLElement {
 
     this._setIcon(iconName);
 
-    this.styleElement.innerHTML = this._svgStyleString(size);
-    this.shadow.appendChild(this.styleElement);
+    this._addStyleChild(size);
   }
 
   attributeChangedCallback(attributeName, oldValue, newValue, namespace) {
     this.attributeChangeManager[attributeName](newValue);
   }
 
-  _svgStyleString(size) {
-    const host = this._areWebComponentsSupported() ? ':host' : 'ikn-icon';
+  _svgStyleString(size, hasShadowDOM) {
+    // we need to know if there's support for :host or not
+    const host = hasShadowDOM ? ':host' : 'ikn-icon';
     return `
       ${host} {
         display: -webkit-inline-box;
@@ -69,22 +67,22 @@ class IkonographIcon extends HTMLElement {
   }
 
   _setIcon(value) {
-    const removedSVG = this._removeSVGChild();
+    const removedSVG = this._removeChild('svg');
     this._addSVGChild(value);
   }
 
   _setSize(value) {
-    this.styleElement.innerHTML = this._svgStyleString(value);
+    this._addStyleChild(value);
   }
 
   /**
    * Remove the SVG child
    * @return {Boolean} true if removed
    */
-  _removeSVGChild() {
-    const currentSVGChild = this.shadow.querySelector('svg');
-    if (currentSVGChild) {
-      this.shadow.removeChild(currentSVGChild);
+  _removeChild(name) {
+    const currentChild = this.shadow.querySelector(name);
+    if (currentChild) {
+      this.shadow.removeChild(currentChild);
       return true;
     }
     return false;
@@ -98,12 +96,23 @@ class IkonographIcon extends HTMLElement {
     this.shadow.appendChild(svgElement.documentElement);
   }
 
-  _areWebComponentsSupported() {
-    return (
-      'registerElement' in document
-      && 'import' in document.createElement('link')
-      && 'content' in document.createElement('template')
-    );
+  _addStyleChild(size) {
+    this._removeChild('style');
+    const styleElement = document.createElement('style');
+    this.shadow.appendChild(styleElement);
+    styleElement.innerHTML = this._svgStyleString(size, true);
+
+    // right next the style apply, we need to check if the style is really
+    // applied to our element. This is a sort of feature detection
+    // to check if a browser support :host
+    const styleApplied = this._isStyleApplied(size);
+    if (!styleApplied) {
+      styleElement.innerHTML = this._svgStyleString(size, false);
+    }
+  }
+
+  _isStyleApplied(size) {
+    return window.getComputedStyle(this).width === size;
   }
 }
 
