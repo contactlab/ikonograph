@@ -85,7 +85,7 @@ Import the `ikonograph.js` component inside your file:
 
 Use the `ikn-icon` element to display the icon by adding the icon name:
 ```html
-<ikn-icon icon="agenda" width="24"></ikn-icon>
+<ikn-icon icon="agenda" size="24px"></ikn-icon>
 ```
 
 ## How to use & Documentation
