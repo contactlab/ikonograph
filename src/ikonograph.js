@@ -29,11 +29,7 @@ class IkonographIcon extends HTMLElement {
     const iconName = this.getAttribute('icon');
     const size = this.getAttribute('size') || '100%';
 
-    const svgElement = new DOMParser().parseFromString(ICONS_SVG[iconName], MIME_TYPE);
-    svgElement.documentElement.removeAttribute('width');
-    svgElement.documentElement.removeAttribute('height');
-
-    this.shadow.appendChild(svgElement.documentElement);
+    this._setIcon(iconName);
 
     this.styleElement.innerHTML = this._svgStyleString(size);
     this.shadow.appendChild(this.styleElement);
@@ -67,19 +63,33 @@ class IkonographIcon extends HTMLElement {
   }
 
   _setIcon(value) {
-    const currentSVGChild = this.shadow.querySelector('svg');
-    if (currentSVGChild) {
-      this.shadow.removeChild(currentSVGChild);
-      const svgElement = new DOMParser().parseFromString(ICONS_SVG[value], MIME_TYPE);
-      svgElement.documentElement.removeAttribute('width');
-      svgElement.documentElement.removeAttribute('height');
-
-      this.shadow.appendChild(svgElement.documentElement);
-    }
+    const removedSVG = this._removeSVGChild();
+    this._addSVGChild(value);
   }
 
   _setSize(value) {
     this.styleElement.innerHTML = this._svgStyleString(value);
+  }
+
+  /**
+   * Remove the SVG child
+   * @return {Boolean} true if removed
+   */
+  _removeSVGChild() {
+    const currentSVGChild = this.shadow.querySelector('svg');
+    if (currentSVGChild) {
+      this.shadow.removeChild(currentSVGChild);
+      return true;
+    }
+    return false;
+  }
+
+  _addSVGChild(icon) {
+    const svgElement = new DOMParser().parseFromString(ICONS_SVG[icon], MIME_TYPE);
+    svgElement.documentElement.removeAttribute('width');
+    svgElement.documentElement.removeAttribute('height');
+
+    this.shadow.appendChild(svgElement.documentElement);
   }
 }
 
