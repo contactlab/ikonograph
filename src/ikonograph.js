@@ -7,6 +7,8 @@ const ICON_ATTR = 'icon';
 const SIZE_ATTR = 'size';
 const ATTRIBUTES = [ICON_ATTR, SIZE_ATTR];
 
+const DEFAULT_SIZE = '100%';
+
 
 class IkonographIcon extends HTMLElement {
   constructor() {
@@ -29,7 +31,7 @@ class IkonographIcon extends HTMLElement {
 
   connectedCallback() {
     const iconName = this.getAttribute(ICON_ATTR);
-    const size = this.getAttribute(SIZE_ATTR) || '100%';
+    const size = this.getAttribute(SIZE_ATTR) || DEFAULT_SIZE;
 
     this._setIcon(iconName);
 
