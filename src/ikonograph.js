@@ -8,6 +8,7 @@ const SIZE_ATTR = 'size';
 const ATTRIBUTES = [ICON_ATTR, SIZE_ATTR];
 
 const DEFAULT_SIZE = '100%';
+const DEFAULT_HOST_SIZE = '24px';
 
 
 class IkonographIcon extends HTMLElement {
@@ -29,7 +30,7 @@ class IkonographIcon extends HTMLElement {
 
   connectedCallback() {
     const iconName = this.getAttribute(ICON_ATTR);
-    const size = this.getAttribute(SIZE_ATTR) || DEFAULT_SIZE;
+    const size = this.getAttribute(SIZE_ATTR) || DEFAULT_HOST_SIZE;
 
     this._setIcon(iconName);
 
@@ -56,8 +57,8 @@ class IkonographIcon extends HTMLElement {
 
       svg {
         display: block;
-        width: 100%;
-        height: 100%;
+        width: ${DEFAULT_SIZE};
+        height: ${DEFAULT_SIZE};
         stroke-width: 0;
         stroke: currentColor;
         fill: currentColor;
@@ -72,7 +73,11 @@ class IkonographIcon extends HTMLElement {
   }
 
   _setSize(value) {
-    this._addStyleChild(value);
+    if (value) {
+      this._addStyleChild(value);
+    } else {
+      this._addStyleChild(DEFAULT_HOST_SIZE);
+    }
   }
 
   /**
@@ -112,6 +117,7 @@ class IkonographIcon extends HTMLElement {
   }
 
   _isStyleApplied(size) {
+    const computedStyle = window.getComputedStyle(this).width || DEFAULT_HOST_SIZE
     return window.getComputedStyle(this).width === size;
   }
 }
