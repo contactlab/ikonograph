@@ -2372,6 +2372,10 @@ ignore@^3.3.3:
   version "3.3.3"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-3.3.3.tgz#432352e57accd87ab3110e82d3fea0e47812156d"
 
+ikonograph@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/ikonograph/-/ikonograph-3.1.0.tgz#9c0195ca01882ce0bf9e21cb25af8e1259eb9b89"
+
 imurmurhash@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/imurmurhash/-/imurmurhash-0.1.4.tgz#9218b9b2b928a238b13dc4fb6b6d576f231453ea"
