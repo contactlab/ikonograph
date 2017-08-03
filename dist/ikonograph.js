@@ -60,6 +60,7 @@ class IkonographIcon extends HTMLElement {
         stroke-width: 0;
         stroke: currentColor;
         fill: currentColor;
+        pointer-events: none;
       }
     `;
   }
