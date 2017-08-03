@@ -19,6 +19,7 @@ gulp.task('build', (cb) => {
     'svgs',
     'svg',
     'replace',
+    'compress',
     (error) => {
       if (error) {
         console.log('\n[build]'.bold.magenta + ' There was an issue building ikonograph:\n'.bold.red + error.message + '\n');
