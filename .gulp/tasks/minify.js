@@ -13,8 +13,5 @@ import paths from '../paths';
 gulp.task('minify', () => {
   return gulp.src(`${paths.dist}/ikonograph.css`)
   .pipe(cssnano())
-/*  .pipe(rename({
-    suffix: ".min"
-  }))*/
   .pipe(gulp.dest( paths.dist ));
 });

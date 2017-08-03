@@ -12,7 +12,7 @@ Ikonograph is the official Contactlab icons library. You can use it as npm/bower
   - [SVG Sprite](#svg-sprite)
     - [As external resource](#as-external-resource)
     - [By inclusion (the old way)](#by-inclusion-the-old-way)
-  - [Polymer iconset (only bower)](#polymer-iconset-only-bower)
+  - [Web Component iconset](#web-component-iconset)
 - [How to use & Documentation](#how-to-use--documentation)
 - [Git branching policies](#git-branching-policies)
 - [License](#license)
@@ -24,19 +24,18 @@ Ikonograph is the official Contactlab icons library. You can use it as npm/bower
 Download the `.zip` package or install via a package manager (Bower, Yarn or NPM):
 
 ```
-$ bower install ikonograph --save
 $ yarn add ikonograph
 $ npm install ikonograph --save
 ```
 
 ## Quick use
 
-You can use Ikonograph by icon font, svg sprite, or [iconset-svg](https://github.com/PolymerElements/iron-iconset-svg) library for Polymer.
+You can use Ikonograph by icon font, svg sprite or web component.
 
 ### Icon Font
 
 ```html
-<link rel="stylesheet" href="bower_components/ikonograph/dist/ikonograph.css">
+<link rel="stylesheet" href="path/to/ikonograph/dist/ikonograph.css">
 ```
 
 Add the css `ink-icon` root class to your element and add the `ikn-[name]` css class to display the relative icon:
@@ -78,15 +77,15 @@ You can now add icons everywhere:
 </svg>
 ```
 
-### Polymer iconset (only bower)
-Import the `ikonograph.html` element inside your file:
+### Web Component iconset
+Import the `ikonograph.js` component inside your file:
 ```html
-<link rel="import" href="bower_components/ikonograph/dist/ikonograph.html">
+<script src="path/to/ikonograph/dist/ikonograph.js">
 ```
 
-Use the `iron-icon` element to display the icon by adding the iconset name and the icon name:
+Use the `ikn-icon` element to display the icon by adding the icon name:
 ```html
-<iron-icon icon="ikonograph:agenda"></iron-icon>
+<ikn-icon icon="agenda" size="24px"></ikn-icon>
 ```
 
 ## How to use & Documentation
