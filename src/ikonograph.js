@@ -44,8 +44,9 @@ class IkonographIcon extends HTMLElement {
   }
 
   _svgStyleString(size) {
+    const host = this._areWebComponentsSupported() ? ':host' : 'ikn-icon';
     return `
-      :host {
+      ${host} {
         display: -webkit-inline-box;
         display: -ms-inline-flexbox;
         display: inline-flex;
@@ -95,6 +96,14 @@ class IkonographIcon extends HTMLElement {
     svgElement.documentElement.removeAttribute('height');
 
     this.shadow.appendChild(svgElement.documentElement);
+  }
+
+  _areWebComponentsSupported() {
+    return (
+      'registerElement' in document
+      && 'import' in document.createElement('link')
+      && 'content' in document.createElement('template')
+    );
   }
 }
 
