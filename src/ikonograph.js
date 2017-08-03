@@ -3,6 +3,9 @@ const ICONS_SVG = {
 };
 
 const MIME_TYPE = 'image/svg+xml';
+const ICON_ATTR = 'icon';
+const SIZE_ATTR = 'size';
+const ATTRIBUTES = [ICON_ATTR, SIZE_ATTR];
 
 
 class IkonographIcon extends HTMLElement {
@@ -15,19 +18,18 @@ class IkonographIcon extends HTMLElement {
 
     this.styleElement = document.createElement('style');
 
-    this.attributeChangeManager = {
-      'icon': value => this._setIcon(value),
-      'size': value => this._setSize(value)
-    };
+    this.attributeChangeManager = {};
+    this.attributeChangeManager[ICON_ATTR] = value => this._setIcon(value);
+    this.attributeChangeManager[SIZE_ATTR] = value => this._setSize(value);
   }
 
   static get observedAttributes() {
-    return ['size', 'icon'];
+    return ATTRIBUTES;
   }
 
   connectedCallback() {
-    const iconName = this.getAttribute('icon');
-    const size = this.getAttribute('size') || '100%';
+    const iconName = this.getAttribute(ICON_ATTR);
+    const size = this.getAttribute(SIZE_ATTR) || '100%';
 
     this._setIcon(iconName);
 
