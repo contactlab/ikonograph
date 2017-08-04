@@ -94,6 +94,11 @@ class IkonographIcon extends HTMLElement {
   }
 
   _addSVGChild(icon) {
+    const svgIconString = ICONS_SVG[icon];
+    if (!svgIconString) {
+      throw new Error('The specified icon does not exist');
+    }
+
     const svgElement = new DOMParser().parseFromString(ICONS_SVG[icon], MIME_TYPE);
     svgElement.documentElement.removeAttribute('width');
     svgElement.documentElement.removeAttribute('height');
