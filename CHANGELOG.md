@@ -1,9 +1,16 @@
-<a name="4.0.0"></a>
-# [4.0.0](https://github.com/contactlab/ikonograph/compare/v3.1.0...v4.0.0) (2017-08-01)
+<a name="4.0.2"></a>
+## [4.0.2](https://github.com/contactlab/ikonograph/compare/v3.1.0...v4.0.2) (2017-08-08)
+
+
+### Bug Fixes
+
+* better management of icon non existent or not specified ([#35](https://github.com/contactlab/ikonograph/issues/35)) ([b191df6](https://github.com/contactlab/ikonograph/commit/b191df6))
+* fixed broken behaviour for style attribute ([#40](https://github.com/contactlab/ikonograph/issues/40)) ([c72a24b](https://github.com/contactlab/ikonograph/commit/c72a24b))
 
 
 ### Features
 
+* new color attribute (38) ([d3e6b36](https://github.com/contactlab/ikonograph/commit/d3e6b36))
 * New ikn-icon CustomElement ([8b1a1b6](https://github.com/contactlab/ikonograph/commit/8b1a1b6))
 
 
@@ -32,9 +39,9 @@
 
 ### Features
 
+* Add sprite SVG ([6a53289](https://github.com/contactlab/ikonograph/commit/6a53289))
 * **builder:** Add SVG's sprite generator ([543fcd4](https://github.com/contactlab/ikonograph/commit/543fcd4))
 * Add SVG sprite ([f44dd85](https://github.com/contactlab/ikonograph/commit/f44dd85))
-* Add sprite SVG ([6a53289](https://github.com/contactlab/ikonograph/commit/6a53289))
 * Add svg-sprite version ([e3f037e](https://github.com/contactlab/ikonograph/commit/e3f037e))
 
 
