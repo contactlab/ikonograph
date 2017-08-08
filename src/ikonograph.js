@@ -45,20 +45,27 @@ class IkonographIcon extends HTMLElement {
     this.attributeChangeManager[attributeName](newValue);
   }
 
-  _svgStyleString(size, color, hasShadowDOM) {
-    // we need to know if there's support for :host or not
-    const host = hasShadowDOM ? ':host' : 'ikn-icon';
+  _svgStyleString(size, color) {
     size = size || DEFAULT_HOST_SIZE;
     color = color || DEFAULT_COLOR;
+
+    const commonStyle = `
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      contain: content;
+      pointer-events: auto;
+      width: ${size};
+      height: ${size};
+    `;
+
     return `
-      ${host} {
-        display: -webkit-inline-box;
-        display: -ms-inline-flexbox;
-        display: inline-flex;
-        contain: content;
-        pointer-events: auto;
-        width: ${size};
-        height: ${size};
+      :host {
+        ${commonStyle}
+      }
+
+      ikn-icon {
+        ${commonStyle}
       }
 
       svg {
@@ -118,21 +125,9 @@ class IkonographIcon extends HTMLElement {
     this._removeChild('style');
     const styleElement = document.createElement('style');
     this.shadow.appendChild(styleElement);
-    styleElement.innerHTML = this._svgStyleString(size, color, true);
-
-    // right next the style apply, we need to check if the style is really
-    // applied to our element. This is a sort of feature detection
-    // to check if a browser support :host
-    const styleApplied = this._isStyleApplied(size);
-    if (!styleApplied) {
-      styleElement.innerHTML = this._svgStyleString(size, color, false);
-    }
+    styleElement.innerHTML = this._svgStyleString(size, color);
   }
 
-  _isStyleApplied(size) {
-    const computedStyle = window.getComputedStyle(this).width || DEFAULT_HOST_SIZE
-    return window.getComputedStyle(this).width === size;
-  }
 }
 
 customElements.define('ikn-icon', IkonographIcon);
