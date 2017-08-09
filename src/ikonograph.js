@@ -36,7 +36,9 @@ class IkonographIcon extends HTMLElement {
     const size = this.getAttribute(SIZE_ATTR);
     const color = this.getAttribute(COLOR_ATTR);
 
-    this._setIcon(iconName);
+    if (!iconName) {
+      this._setIcon(iconName);
+    }
 
     this._addStyleChild(size, color);
   }
