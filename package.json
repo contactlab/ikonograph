@@ -1,6 +1,6 @@
 {
   "name": "ikonograph",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "Icons library by Contactlab",
   "main": "./dist/ikonograph.min.css",
   "directories": {
