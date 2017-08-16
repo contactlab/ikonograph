@@ -1,10 +1,11 @@
-<a name="4.0.2"></a>
-## [4.0.2](https://github.com/contactlab/ikonograph/compare/v3.1.0...v4.0.2) (2017-08-08)
+<a name="4.0.3"></a>
+## [4.0.3](https://github.com/contactlab/ikonograph/compare/v3.1.0...v4.0.3) (2017-08-16)
 
 
 ### Bug Fixes
 
 * better management of icon non existent or not specified ([#35](https://github.com/contactlab/ikonograph/issues/35)) ([b191df6](https://github.com/contactlab/ikonograph/commit/b191df6))
+* Fix throw error blocking parse ([d26c3b6](https://github.com/contactlab/ikonograph/commit/d26c3b6))
 * fixed broken behaviour for style attribute ([#40](https://github.com/contactlab/ikonograph/issues/40)) ([c72a24b](https://github.com/contactlab/ikonograph/commit/c72a24b))
 
 
