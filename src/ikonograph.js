@@ -3,6 +3,7 @@ const ICONS_SVG = {
 };
 
 const MIME_TYPE = 'image/svg+xml';
+const ICON_DEFAULT = 'agenda';
 const ICON_ATTR = 'icon';
 const SIZE_ATTR = 'size';
 const COLOR_ATTR = 'color';
@@ -35,10 +36,6 @@ class IkonographIcon extends HTMLElement {
     const iconName = this.getAttribute(ICON_ATTR);
     const size = this.getAttribute(SIZE_ATTR);
     const color = this.getAttribute(COLOR_ATTR);
-
-    if (!iconName) {
-      this._setIcon(iconName);
-    }
 
     this._addStyleChild(size, color);
   }
@@ -111,12 +108,12 @@ class IkonographIcon extends HTMLElement {
   }
 
   _addSVGChild(icon) {
-    const svgIconString = ICONS_SVG[icon];
-    if (!svgIconString) {
-      throw new Error('The specified icon does not exist');
+    if (!ICONS_SVG[icon]) {
+      console.warn('Ikonograph: The specified icon does not exist');
     }
 
-    const svgElement = new DOMParser().parseFromString(ICONS_SVG[icon], MIME_TYPE);
+    const currentIcon = ICONS_SVG[icon] || ICONS_SVG[ICON_DEFAULT];
+    const svgElement = new DOMParser().parseFromString(currentIcon, MIME_TYPE);
     svgElement.documentElement.removeAttribute('width');
     svgElement.documentElement.removeAttribute('height');
 
