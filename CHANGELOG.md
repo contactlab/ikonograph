@@ -1,16 +1,19 @@
-<a name="4.0.3"></a>
-## [4.0.3](https://github.com/contactlab/ikonograph/compare/v3.1.0...v4.0.3) (2017-08-16)
+<a name="4.1.0"></a>
+# [4.1.0](https://github.com/contactlab/ikonograph/compare/v3.1.0...v4.1.0) (2017-09-19)
 
 
 ### Bug Fixes
 
 * better management of icon non existent or not specified ([#35](https://github.com/contactlab/ikonograph/issues/35)) ([b191df6](https://github.com/contactlab/ikonograph/commit/b191df6))
+* Fix fix file-code-full icon ([c0bff59](https://github.com/contactlab/ikonograph/commit/c0bff59))
 * Fix throw error blocking parse ([d26c3b6](https://github.com/contactlab/ikonograph/commit/d26c3b6))
 * fixed broken behaviour for style attribute ([#40](https://github.com/contactlab/ikonograph/issues/40)) ([c72a24b](https://github.com/contactlab/ikonograph/commit/c72a24b))
+* Update send iconC ([375946b](https://github.com/contactlab/ikonograph/commit/375946b))
 
 
 ### Features
 
+* Add new camera icon ([a878938](https://github.com/contactlab/ikonograph/commit/a878938))
 * new color attribute (38) ([d3e6b36](https://github.com/contactlab/ikonograph/commit/d3e6b36))
 * New ikn-icon CustomElement ([8b1a1b6](https://github.com/contactlab/ikonograph/commit/8b1a1b6))
 
