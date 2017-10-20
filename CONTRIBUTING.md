@@ -7,8 +7,18 @@ First you have to install the dependencies, you can use both [YARN](https://yarn
 - `yarn install`
 - `npm install`
 
-## Build
-You can build the project by running `gulp`. This will start the build task.
+## Commands
+Here a list of available commands:
+
+`yarn build`
+> Start the build task.
+
+`yarn bump`
+> Bump the library version. You can pass some arguments: `--minor`, `--major`. Default: `--patch`
+
+`yarn changelog`
+> Generate the changelog based on semantic-commits tags
+
 
 ## Test / Demo
 Run an `http-server` inside the demo folder.

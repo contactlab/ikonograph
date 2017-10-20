@@ -1,13 +1,19 @@
 {
   "name": "ikonograph",
-  "version": "4.1.0",
+  "version": "4.1.1",
   "description": "Icons library by Contactlab",
   "main": "./dist/ikonograph.min.css",
   "directories": {
     "test": "test"
   },
+  "files": [
+    "dist",
+    "demo"
+  ],
   "scripts": {
-    "start": "gulp"
+    "build": "gulp",
+    "bump": "gulp bump",
+    "changelog": "gulp changelog"
   },
   "repository": {
     "type": "git",
