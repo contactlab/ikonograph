@@ -85,13 +85,13 @@ class IkonographIcon extends HTMLElement {
   }
 
   _setSize(value) {
-    const color = this.getAttribute(COLOR_ATTR);
-    this._addStyleChild(value, color);
+    const size = this.getAttribute(SIZE_ATTR);
+    this._addStyleChild(size, value);
   }
 
   _setColor(value) {
-    const size = this.getAttribute(SIZE_ATTR);
-    this._addStyleChild(size, value);
+    const color = this.getAttribute(COLOR_ATTR);
+    this._addStyleChild(value, color);
   }
 
   /**
