@@ -13,10 +13,10 @@ Ikonograph is the official Contactlab icons library. You can use it as npm depen
   - [SVG Sprite](#svg-sprite)
     - [As external resource](#as-external-resource)
     - [By inclusion (the old way)](#by-inclusion-the-old-way)
-  - [Web Component iconset](#web-component-iconset)
-- [How to use & Documentation](#how-to-use--documentation)
-- [Git branching policies](#git-branching-policies)
-- [License](#license)
+  - [Web Component iconset](#web-component-iconset-)
+- [How to use & Documentation](#how-to-use--documentation-)
+- [Git branching policies](#git-branching-policies-)
+- [License](#license-)
 
 <!-- /TOC -->
 
@@ -89,11 +89,11 @@ Use the `ikn-icon` element to display the icon by adding the icon name:
 <ikn-icon icon="agenda" size="24px"></ikn-icon>
 ```
 
-## How to use & Documentation
+## How to use & Documentation <sup>[↑](#readme)</sup>
 For detailed instruction on how to use the Ikonograph library and the available icons refer to the [Contactlab Pattern Library documentation](https://ux.contactlab.com/#/design/iconography).
 
-## Git branching policies
+## Git branching policies <sup>[↑](#readme)</sup>
 Any feature/bug fixing/refactor must be developed on a **feature branch** derived from the **develop** branch and integrate the changes through a **pull request** to have a code review.
 
-## License
+## License <sup>[↑](#readme)</sup>
 Released and distributed under the [Apache 2.0](LICENSE) license.
