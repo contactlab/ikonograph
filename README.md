@@ -13,10 +13,10 @@ Ikonograph is the official Contactlab icons library. You can use it as npm depen
   - [SVG Sprite](#svg-sprite)
     - [As external resource](#as-external-resource)
     - [By inclusion (the old way)](#by-inclusion-the-old-way)
-  - [Web Component iconset](#web-component-iconset)
-- [How to use & Documentation](#how-to-use--documentation)
-- [Git branching policies](#git-branching-policies)
-- [License](#license)
+  - [Web Component iconset](#web-component-iconset-)
+- [How to use & Documentation](#how-to-use--documentation-)
+- [Git branching policies](#git-branching-policies-)
+- [License](#license-)
 
 <!-- /TOC -->
 
