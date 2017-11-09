@@ -1,5 +1,5 @@
 <a name="4.1.1"></a>
-## [4.1.1](https://github.com/contactlab/ikonograph/compare/v3.1.0...v4.1.1) (2017-10-20)
+## [4.1.1](https://github.com/contactlab/ikonograph/compare/v4.1.0...v4.1.1) (2017-10-20)
 
 
 ### Bug Fixes
