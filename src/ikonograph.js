@@ -1,5 +1,5 @@
 const ICONS_SVG = {
-  "agenda-full": "<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">\n<title>agenda-full</title>\n<path d=\"M16 0h-13c-0.553 0-1 0.447-1 1v22c0 0.553 0.447 1 1 1h13v-24zM9 7l-3 2v-7h6v7l-3-2z\"></path>\n<path d=\"M19 0h-1v24h1c1.654 0 3-1.346 3-3v-18c0-1.654-1.346-3-3-3z\"></path>\n</svg>\n"
+  "agenda": "<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">\n<title>agenda-full</title>\n<path d=\"M16 0h-13c-0.553 0-1 0.447-1 1v22c0 0.553 0.447 1 1 1h13v-24zM9 7l-3 2v-7h6v7l-3-2z\"></path>\n<path d=\"M19 0h-1v24h1c1.654 0 3-1.346 3-3v-18c0-1.654-1.346-3-3-3z\"></path>\n</svg>\n"
 };
 
 const MIME_TYPE = 'image/svg+xml';
@@ -8,11 +8,8 @@ const ICON_ATTR = 'icon';
 const SIZE_ATTR = 'size';
 const COLOR_ATTR = 'color';
 const ATTRIBUTES = [ICON_ATTR, SIZE_ATTR, COLOR_ATTR];
-
-const DEFAULT_SIZE = '100%';
 const DEFAULT_HOST_SIZE = '24px';
 const DEFAULT_COLOR = 'currentColor';
-
 
 class IkonographIcon extends HTMLElement {
   constructor() {
@@ -37,46 +34,53 @@ class IkonographIcon extends HTMLElement {
     const size = this.getAttribute(SIZE_ATTR);
     const color = this.getAttribute(COLOR_ATTR);
 
-    this._addStyleChild(size, color);
+    this._addStyle(size, color);
   }
 
   attributeChangedCallback(attributeName, oldValue, newValue, namespace) {
     this.attributeChangeManager[attributeName](newValue);
   }
 
-  _svgStyleString(size, color) {
-    size = size || DEFAULT_HOST_SIZE;
-    color = color || DEFAULT_COLOR;
+  _shadowDomIsSupported() {
+    return Boolean('registerElement' in document
+    && 'import' in document.createElement('link')
+    && 'content' in document.createElement('template'));
+  }
 
+  _inlineStyle(size, color) {
+    return `
+      width: ${size};
+      height: ${size};
+      fill: ${color};
+      stroke: ${color};
+    `;
+  }
+
+  _rootStyle(size, color) {
     const commonStyle = `
       display: -webkit-inline-box;
       display: -ms-inline-flexbox;
       display: inline-flex;
       contain: content;
       pointer-events: auto;
-      width: ${size};
-      height: ${size};
     `;
 
-    return `
+    const styleString = `
       :host {
-        ${commonStyle}
+        ${ commonStyle }
       }
-
       ikn-icon {
-        ${commonStyle}
+        ${ commonStyle }
       }
-
       svg {
+        ${ (this._shadowDomIsSupported()) ? this._inlineStyle(size, color) : '' }
         display: block;
-        width: ${DEFAULT_SIZE};
-        height: ${DEFAULT_SIZE};
         stroke-width: 0;
-        stroke: ${color};
-        fill: ${color};
         pointer-events: none;
       }
     `;
+
+    return styleString;
   }
 
   _setIcon(value) {
@@ -85,13 +89,13 @@ class IkonographIcon extends HTMLElement {
   }
 
   _setSize(value) {
-    const size = this.getAttribute(SIZE_ATTR);
-    this._addStyleChild(size, value);
+    const color = this.getAttribute(COLOR_ATTR);
+    this._addStyle(value, color);
   }
 
   _setColor(value) {
-    const color = this.getAttribute(COLOR_ATTR);
-    this._addStyleChild(value, color);
+    const size = this.getAttribute(SIZE_ATTR);
+    this._addStyle(size, value);
   }
 
   /**
@@ -120,13 +124,20 @@ class IkonographIcon extends HTMLElement {
     this.shadow.appendChild(svgElement.documentElement);
   }
 
-  _addStyleChild(size, color) {
+  _addStyle(size, color) {
+    size = size || DEFAULT_HOST_SIZE;
+    color = color || DEFAULT_COLOR;
+
+    if (!this._shadowDomIsSupported()) {
+      const svgChild = this.shadow.querySelector('svg');
+      svgChild.setAttribute('style', this._inlineStyle(size, color) );
+    }
+
     this._removeChild('style');
     const styleElement = document.createElement('style');
     this.shadow.appendChild(styleElement);
-    styleElement.innerHTML = this._svgStyleString(size, color);
+    styleElement.innerHTML = this._rootStyle(size, color);
   }
-
 }
 
 customElements.define('ikn-icon', IkonographIcon);
