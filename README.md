@@ -88,6 +88,7 @@ Use the `ikn-icon` element to display the icon by adding the icon name:
 ```html
 <ikn-icon icon="agenda" size="24px"></ikn-icon>
 ```
+In browsers that don't support Shadow DOM (Firefox or Edge), it isn't possible to update attribute values ​​dynamically without page reload.
 
 ## How to use & Documentation <sup>[↑](#readme)</sup>
 For detailed instruction on how to use the Ikonograph library and the available icons refer to the [Contactlab Pattern Library documentation](https://ux.contactlab.com/#/design/iconography).
