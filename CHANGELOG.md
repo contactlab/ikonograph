@@ -1,3 +1,14 @@
+<a name="4.1.2"></a>
+## [4.1.2](https://github.com/contactlab/ikonograph/compare/v4.1.1...v4.1.2) (2017-12-04)
+
+
+### Bug Fixes
+
+* Fix _setSize and _setColor methods ([4cf4d17](https://github.com/contactlab/ikonograph/commit/4cf4d17))
+* Fix global style when shadow dom is not supported ([2f9d628](https://github.com/contactlab/ikonograph/commit/2f9d628)), closes [#46](https://github.com/contactlab/ikonograph/issues/46)
+
+
+
 <a name="4.1.1"></a>
 ## [4.1.1](https://github.com/contactlab/ikonograph/compare/v4.1.0...v4.1.1) (2017-10-20)
 
@@ -5,7 +16,6 @@
 ### Bug Fixes
 
 * better management of icon non existent or not specified ([#35](https://github.com/contactlab/ikonograph/issues/35)) ([b191df6](https://github.com/contactlab/ikonograph/commit/b191df6))
-* Define files to be devilered with npm ([2db9038](https://github.com/contactlab/ikonograph/commit/2db9038))
 * Fix fix file-code-full icon ([c0bff59](https://github.com/contactlab/ikonograph/commit/c0bff59))
 * Fix throw error blocking parse ([d26c3b6](https://github.com/contactlab/ikonograph/commit/d26c3b6))
 * fixed broken behaviour for style attribute ([#40](https://github.com/contactlab/ikonograph/issues/40)) ([c72a24b](https://github.com/contactlab/ikonograph/commit/c72a24b))
