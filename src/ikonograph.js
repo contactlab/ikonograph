@@ -41,10 +41,22 @@ class IkonographIcon extends HTMLElement {
     this.attributeChangeManager[attributeName](newValue);
   }
 
+  /**
+   ** Web-Components Shadow DOM
+   ** @return {Boolean} true if Shadow DOM is supported
+   **/
   _shadowDomIsSupported() {
     return Boolean('registerElement' in document
     && 'import' in document.createElement('link')
     && 'content' in document.createElement('template'));
+  }
+
+  /**
+   ** Web-Components Shady DOM
+   ** @return {Boolean} true if Shady DOM is used
+   **/
+  _shadyDomInUse() {
+    return Boolean('ShadyDOM' in window);
   }
 
   _inlineStyle(size, color) {
@@ -73,7 +85,7 @@ class IkonographIcon extends HTMLElement {
         ${ commonStyle }
       }
       svg {
-        ${ (this._shadowDomIsSupported()) ? this._inlineStyle(size, color) : '' }
+        ${ (this._shadowDomIsSupported() || !this._shadyDomInUse()) ? this._inlineStyle(size, color) : '' }
         display: block;
         stroke-width: 0;
         pointer-events: none;
@@ -99,9 +111,9 @@ class IkonographIcon extends HTMLElement {
   }
 
   /**
-   * Remove the SVG child
-   * @return {Boolean} true if removed
-   */
+   ** Remove the SVG child
+   ** @return {Boolean} true if removed
+   **/
   _removeChild(name) {
     const currentChild = this.shadow.querySelector(name);
     if (currentChild) {
@@ -128,7 +140,7 @@ class IkonographIcon extends HTMLElement {
     size = size || DEFAULT_HOST_SIZE;
     color = color || DEFAULT_COLOR;
 
-    if (!this._shadowDomIsSupported()) {
+    if (!this._shadowDomIsSupported() || !!this._shadyDomInUse()) {
       const svgChild = this.shadow.querySelector('svg');
       svgChild.setAttribute('style', this._inlineStyle(size, color) );
     }
