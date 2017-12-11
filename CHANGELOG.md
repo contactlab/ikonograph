@@ -1,11 +1,12 @@
-<a name="4.1.2"></a>
-## [4.1.2](https://github.com/contactlab/ikonograph/compare/v4.1.1...v4.1.2) (2017-12-04)
+<a name="4.1.3"></a>
+## [4.1.3](https://github.com/contactlab/ikonograph/compare/v4.1.1...v4.1.3) (2017-12-11)
 
 
 ### Bug Fixes
 
 * Fix _setSize and _setColor methods ([4cf4d17](https://github.com/contactlab/ikonograph/commit/4cf4d17))
 * Fix global style when shadow dom is not supported ([2f9d628](https://github.com/contactlab/ikonograph/commit/2f9d628)), closes [#46](https://github.com/contactlab/ikonograph/issues/46)
+* private method for Shady DOM detection added ([f464dca](https://github.com/contactlab/ikonograph/commit/f464dca))
 
 
 
