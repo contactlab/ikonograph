@@ -13,10 +13,11 @@ Ikonograph is the official Contactlab icons library. You can use it as npm depen
   - [SVG Sprite](#svg-sprite)
     - [As external resource](#as-external-resource)
     - [By inclusion (the old way)](#by-inclusion-the-old-way)
-  - [Web Component iconset](#web-component-iconset-)
-- [How to use & Documentation](#how-to-use--documentation-)
-- [Git branching policies](#git-branching-policies-)
-- [License](#license-)
+  - [Web Component iconset](#web-component-iconset)
+    - [As js module](#as-js-module)
+- [How to use & Documentation <sup>[↑](#readme)</sup>](#how-to-use--documentation-sup↑readmesup)
+- [Git branching policies <sup>[↑](#readme)</sup>](#git-branching-policies-sup↑readmesup)
+- [License <sup>[↑](#readme)</sup>](#license-sup↑readmesup)
 
 <!-- /TOC -->
 
@@ -88,7 +89,13 @@ Use the `ikn-icon` element to display the icon by adding the icon name:
 ```html
 <ikn-icon icon="agenda" size="24px"></ikn-icon>
 ```
-In browsers that don't support Shadow DOM (Firefox or Edge), it isn't possible to update attribute values ​​dynamically without page reload.
+In browsers that don't support Shadow DOM (Firefox or Edge), or, if you are using the polyfill, it isn't possible to update attribute values ​​dynamically without a page reload.
+
+#### As js module
+You can also use ikonograph as js module inside your bundler by importing it:
+```js
+import 'ikonograph/dist/ikonograph';
+```
 
 ## How to use & Documentation <sup>[↑](#readme)</sup>
 For detailed instruction on how to use the Ikonograph library and the available icons refer to the [Contactlab Pattern Library documentation](https://ux.contactlab.com/#/design/iconography).
