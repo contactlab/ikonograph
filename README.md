@@ -5,21 +5,17 @@
 
 Ikonograph is the official Contactlab icons library. You can use it as npm dependency, you have just to import the css file and you can start to add icons everywhere. You can see all available icons [HERE](https://ux.contactlab.com/#/design/iconography).
 
-<!-- TOC -->
-
-- [Installation](#installation)
-- [Quick use](#quick-use)
-  - [Icon Font](#icon-font)
-  - [SVG Sprite](#svg-sprite)
-    - [As external resource](#as-external-resource)
-    - [By inclusion (the old way)](#by-inclusion-the-old-way)
-  - [Web Component iconset](#web-component-iconset)
-    - [As js module](#as-js-module)
-- [How to use & Documentation <sup>[↑](#readme)</sup>](#how-to-use--documentation-sup↑readmesup)
-- [Git branching policies <sup>[↑](#readme)</sup>](#git-branching-policies-sup↑readmesup)
-- [License <sup>[↑](#readme)</sup>](#license-sup↑readmesup)
-
-<!-- /TOC -->
+  - [Installation](#installation)
+  - [Quick use](#quick-use)
+    - [Icon Font](#icon-font)
+    - [SVG Sprite](#svg-sprite)
+      - [As external resource](#as-external-resource)
+      - [By inclusion (the old way)](#by-inclusion-the-old-way)
+    - [Web Component iconset](#web-component-iconset)
+      - [As js module](#as-js-module)
+  - [How to use & Documentation](#how-to-use-documentation)
+  - [Git branching policies](#git-branching-policies)
+  - [License](#license)
 
 ## Installation
 
@@ -97,11 +93,11 @@ You can also use ikonograph as js module inside your bundler by importing it:
 import 'ikonograph/dist/ikonograph';
 ```
 
-## How to use & Documentation <sup>[↑](#readme)</sup>
+## How to use & Documentation
 For detailed instruction on how to use the Ikonograph library and the available icons refer to the [Contactlab Pattern Library documentation](https://ux.contactlab.com/#/design/iconography).
 
-## Git branching policies <sup>[↑](#readme)</sup>
+## Git branching policies
 Any feature/bug fixing/refactor must be developed on a **feature branch** derived from the **develop** branch and integrate the changes through a **pull request** to have a code review.
 
-## License <sup>[↑](#readme)</sup>
+## License
 Released and distributed under the [Apache 2.0](LICENSE) license.
