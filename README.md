@@ -14,6 +14,7 @@ Ikonograph is the official Contactlab icons library. You can use it as npm depen
     - [Web Component iconset](#web-component-iconset)
       - [As js module](#as-js-module)
   - [How to use & Documentation](#how-to-use-documentation)
+  - [Deprecation note](#deprecation-note)  
   - [Git branching policies](#git-branching-policies)
   - [License](#license)
 
@@ -95,6 +96,9 @@ import 'ikonograph/dist/ikonograph';
 
 ## How to use & Documentation
 For detailed instruction on how to use the Ikonograph library and the available icons refer to the [Contactlab Pattern Library documentation](https://ux.contactlab.com/#/design/iconography).
+
+## Deprecation note
+Please note that **from v5 ikonograph will not support icon fonts anymore**. We believe in a modern web and we support only non-obsolete technologies. Since SVG is largely supported we will keep only the web component and svg sprite versions.
 
 ## Git branching policies
 Any feature/bug fixing/refactor must be developed on a **feature branch** derived from the **develop** branch and integrate the changes through a **pull request** to have a code review.
