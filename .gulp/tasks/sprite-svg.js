@@ -12,7 +12,7 @@ import path from 'path';
 import paths from '../paths';
 
 
-gulp.task('svgs', () => {
+gulp.task('sprite', () => {
   return gulp.src(`${paths.src}/svgs/*.svg`)
     .pipe(svgMin((file) => {
       var prefix = path.basename(file.relative, path.extname(file.relative));

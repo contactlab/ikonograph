@@ -1,9 +1,9 @@
 <p align="center"><img src="https://i.imgur.com/9rnoZhX.gif" width="800"></p>
 
 
-<img width="24px" alt="Google Chrome" src="https://cdn.rawgit.com/alrra/browser-logos/2109c114/src/chrome/chrome_48x48.png"><img width="24px" alt="Firefox" src="https://cdn.rawgit.com/alrra/browser-logos/2109c114/src/firefox/firefox_48x48.png"><img width="24px" alt="Safari" src="https://cdn.rawgit.com/alrra/browser-logos/2109c114/src/safari/safari_48x48.png" title="💩"><img width="24px" alt="Microsoft Edge" src="https://cdn.rawgit.com/alrra/browser-logos/2109c114/src/edge/edge_48x48.png" title="💩">
+<img width="24px" alt="Google Chrome" src="https://cdn.rawgit.com/alrra/browser-logos/2109c114/src/chrome/chrome_48x48.png"><img width="24px" alt="Firefox" src="https://cdn.rawgit.com/alrra/browser-logos/2109c114/src/firefox/firefox_48x48.png"><img width="24px" alt="Safari" src="https://cdn.rawgit.com/alrra/browser-logos/2109c114/src/safari/safari_48x48.png" title="💩"><img width="24px" alt="Microsoft Edge" src="https://cdn.rawgit.com/alrra/browser-logos/2109c114/src/edge/edge_48x48.png" title="💩"> [![NPM Downloads](https://img.shields.io/npm/dm/ikonograph.svg)](https://npmcharts.com/compare/ikonograph?minimal=true)
 
-Ikonograph is the official Contactlab icons library. You can use it as npm dependency, you have just to import the css file and you can start to add icons everywhere. You can see all available icons [HERE](https://ux.contactlab.com/#/design/iconography).
+Ikonograph is the official Contactlab icons library. You can use it as npm dependency, you have just to import the css file and you can start to add icons everywhere. You can see all available icons [HERE](https://ux.contactlab.com/#/iconography).
 
   - [Installation](#installation)
   - [Quick use](#quick-use)
@@ -14,6 +14,7 @@ Ikonograph is the official Contactlab icons library. You can use it as npm depen
     - [Web Component iconset](#web-component-iconset)
       - [As js module](#as-js-module)
   - [How to use & Documentation](#how-to-use-documentation)
+  - [Deprecation note](#deprecation-note)  
   - [Git branching policies](#git-branching-policies)
   - [License](#license)
 
@@ -95,6 +96,9 @@ import 'ikonograph/dist/ikonograph';
 
 ## How to use & Documentation
 For detailed instruction on how to use the Ikonograph library and the available icons refer to the [Contactlab Pattern Library documentation](https://ux.contactlab.com/#/design/iconography).
+
+## Deprecation note
+Please note that **from v5 ikonograph will not support icon fonts anymore**. We believe in a modern web and we support only non-obsolete technologies. Since SVG is largely supported we will keep only the web component and svg sprite versions.
 
 ## Git branching policies
 Any feature/bug fixing/refactor must be developed on a **feature branch** derived from the **develop** branch and integrate the changes through a **pull request** to have a code review.
