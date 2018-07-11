@@ -16,7 +16,7 @@ gulp.task('build', (cb) => {
     'cleanDist',
     'sass',
     'fonts',
-    'svgs',
+    'sprite',
     'svg',
     'replace',
     'compress',
