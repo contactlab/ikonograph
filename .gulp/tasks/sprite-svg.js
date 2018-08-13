@@ -5,7 +5,7 @@
  */
 
 import gulp from 'gulp';
-import svgMin from 'gulp-svgmin';
+import svgo from 'gulp-svgo';
 import svgStore from 'gulp-svgstore';
 import rename from 'gulp-rename';
 import path from 'path';
@@ -14,14 +14,13 @@ import paths from '../paths';
 
 gulp.task('sprite', () => {
   return gulp.src(`${paths.src}/svgs/*.svg`)
-    .pipe(svgMin((file) => {
+    .pipe(svgo((file) => {
       var prefix = path.basename(file.relative, path.extname(file.relative));
       return {
         plugins: [{
           js2svg: {
             pretty: true
           },
-          removeStyleElement: true,
           cleanupIDs: {
             prefix: prefix + '-',
             minify: true
@@ -33,7 +32,10 @@ gulp.task('sprite', () => {
             names2hex: true,
             rgb2hex: true
           },
-          removeMetadata: false
+          removeMetadata: false,
+          removeStyleElement: true,
+          removeTitle: true,
+          removeUselessStrokeAndFill: true
         }]
       }
     }))

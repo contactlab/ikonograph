@@ -6,7 +6,6 @@
 
 import gulp from 'gulp';
 import del from 'del';
-import runSequence from 'run-sequence';
 import paths from '../paths';
 
 
