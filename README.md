@@ -14,7 +14,7 @@ Ikonograph is the official Contactlab icons library. You can use it as npm depen
     - [Web Component iconset](#web-component-iconset)
       - [As js module](#as-js-module)
   - [How to use & Documentation](#how-to-use-documentation)
-  - [Deprecation note](#deprecation-note)  
+  - [Deprecation note](#deprecation-note)
   - [Git branching policies](#git-branching-policies)
   - [License](#license)
 
@@ -22,8 +22,7 @@ Ikonograph is the official Contactlab icons library. You can use it as npm depen
 
 Download the `.zip` package or install via a package manager (Yarn or NPM):
 
-```
-$ yarn add ikonograph
+```shell
 $ npm install ikonograph --save
 ```
 
