@@ -1,5 +1,5 @@
-<a name="4.1.4"></a>
-## [4.1.4](https://github.com/contactlab/ikonograph/compare/v4.1.1...v4.1.4) (2018-07-11)
+<a name="5.0.0"></a>
+# [5.0.0](https://github.com/contactlab/ikonograph/compare/v4.1.1...v5.0.0) (2018-08-13)
 
 
 ### Bug Fixes
@@ -8,6 +8,12 @@
 * Fix _setSize and _setColor methods ([4cf4d17](https://github.com/contactlab/ikonograph/commit/4cf4d17))
 * Fix global style when shadow dom is not supported ([2f9d628](https://github.com/contactlab/ikonograph/commit/2f9d628)), closes [#46](https://github.com/contactlab/ikonograph/issues/46)
 * private method for Shady DOM detection added ([f464dca](https://github.com/contactlab/ikonograph/commit/f464dca))
+* Remove duplicated logo-* icons ([ab22b12](https://github.com/contactlab/ikonograph/commit/ab22b12)), closes [#54](https://github.com/contactlab/ikonograph/issues/54)
+
+
+### Features
+
+* Add new icons: button, add-user, cake, credit-card, home, journey, list-arrows ([f368326](https://github.com/contactlab/ikonograph/commit/f368326)), closes [#53](https://github.com/contactlab/ikonograph/issues/53)
 
 
 

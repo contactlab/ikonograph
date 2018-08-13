@@ -1,11 +1,8 @@
 {
   "name": "ikonograph",
-  "version": "4.1.4",
+  "version": "5.0.0",
   "description": "Icons library by Contactlab",
   "main": "./dist/ikonograph.min.css",
-  "directories": {
-    "test": "test"
-  },
   "files": [
     "dist",
     "demo"
@@ -22,8 +19,7 @@
   "keywords": [
     "contactlab",
     "icons",
-    "library",
-    "font"
+    "library"
   ],
   "author": "ContactLab",
   "license": "Apache-2.0",
