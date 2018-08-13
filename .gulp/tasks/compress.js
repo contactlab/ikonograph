@@ -5,7 +5,6 @@
  */
 
 import gulp from 'gulp'
-import uglify from 'gulp-uglify';
 import pump from 'pump';
 import uglifyjs from 'uglify-es';
 import composer from 'gulp-uglify/composer';

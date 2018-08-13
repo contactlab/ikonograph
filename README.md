@@ -5,18 +5,16 @@
 
 Ikonograph is the official Contactlab icons library. You can use it as npm dependency, you have just to import the css file and you can start to add icons everywhere. You can see all available icons [HERE](https://ux.contactlab.com/#/iconography).
 
-  - [Installation](#installation)
-  - [Quick use](#quick-use)
-    - [Icon Font](#icon-font)
-    - [SVG Sprite](#svg-sprite)
-      - [As external resource](#as-external-resource)
-      - [By inclusion (the old way)](#by-inclusion-the-old-way)
-    - [Web Component iconset](#web-component-iconset)
-      - [As js module](#as-js-module)
-  - [How to use & Documentation](#how-to-use-documentation)
-  - [Deprecation note](#deprecation-note)
-  - [Git branching policies](#git-branching-policies)
-  - [License](#license)
+- [Installation](#installation)
+- [Quick use](#quick-use)
+  - [SVG Sprite](#svg-sprite)
+    - [As external resource](#as-external-resource)
+    - [By inclusion (the old way)](#by-inclusion-the-old-way)
+  - [Web Component iconset](#web-component-iconset)
+    - [As js module](#as-js-module)
+- [How to use & Documentation](#how-to-use--documentation)
+- [Git branching policies](#git-branching-policies)
+- [License](#license)
 
 ## Installation
 
@@ -28,24 +26,12 @@ $ npm install ikonograph --save
 
 ## Quick use
 
-You can use Ikonograph by icon font, svg sprite or web component.
-
-### Icon Font
-
-```html
-<link rel="stylesheet" href="path/to/ikonograph/dist/ikonograph.css">
-```
-
-Add the css `ink-icon` root class to your element and add the `ikn-[name]` css class to display the relative icon:
-
-```html
-<span class="ikn ikn-users"></span>
-```
+You can use Ikonograph as svg sprite or web component.
 
 ### SVG Sprite
-If you don't want to use the icon font you can choose to use the **svg-sprite** version of Ikonograph. SVG sprite is a set of svg symbols that you can import and use inside your html, read about [icon fonts vs svg](https://css-tricks.com/icon-fonts-vs-svg/) .
+You can choose to use the **svg-sprite** version of Ikonograph. SVG sprite is a set of svg symbols that you can import and use inside your html, read about [icon fonts vs svg](https://css-tricks.com/icon-fonts-vs-svg/) .
 
-There is 2 ways to use the SVG sprite
+There is 2 ways to use the SVG sprite:
 
 #### As external resource
 
@@ -95,9 +81,6 @@ import 'ikonograph/dist/ikonograph';
 
 ## How to use & Documentation
 For detailed instruction on how to use the Ikonograph library and the available icons refer to the [Contactlab Pattern Library documentation](https://ux.contactlab.com/#/design/iconography).
-
-## Deprecation note
-Please note that **from v5 ikonograph will not support icon fonts anymore**. We believe in a modern web and we support only non-obsolete technologies. Since SVG is largely supported we will keep only the web component and svg sprite versions.
 
 ## Git branching policies
 Any feature/bug fixing/refactor must be developed on a **feature branch** derived from the **develop** branch and integrate the changes through a **pull request** to have a code review.
