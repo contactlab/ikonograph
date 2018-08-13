@@ -2,7 +2,7 @@
   "name": "ikonograph",
   "version": "5.0.0",
   "description": "Icons library by Contactlab",
-  "main": "./dist/ikonograph.min.css",
+  "main": "./dist/ikonograph.js",
   "files": [
     "dist",
     "demo"
