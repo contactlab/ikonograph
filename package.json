@@ -48,7 +48,7 @@
     "gulp-rename": "1.2.2",
     "gulp-replace": "0.6.1",
     "gulp-stats": "0.0.4",
-    "gulp-svgo": "1.5.4",
+    "gulp-svgmin": "1.2.4",
     "gulp-svgstore": "6.1.0",
     "gulp-uglify": "3.0.0",
     "gulp-watch": "4.3.8",
