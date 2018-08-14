@@ -1,5 +1,5 @@
-<a name="5.0.0"></a>
-# [5.0.0](https://github.com/contactlab/ikonograph/compare/v4.1.1...v5.0.0) (2018-08-13)
+<a name="5.0.1"></a>
+## [5.0.1](https://github.com/contactlab/ikonograph/compare/v4.1.1...v5.0.1) (2018-08-14)
 
 
 ### Bug Fixes
@@ -9,6 +9,7 @@
 * Fix global style when shadow dom is not supported ([2f9d628](https://github.com/contactlab/ikonograph/commit/2f9d628)), closes [#46](https://github.com/contactlab/ikonograph/issues/46)
 * private method for Shady DOM detection added ([f464dca](https://github.com/contactlab/ikonograph/commit/f464dca))
 * Remove duplicated logo-* icons ([ab22b12](https://github.com/contactlab/ikonograph/commit/ab22b12)), closes [#54](https://github.com/contactlab/ikonograph/issues/54)
+* Update svgo configuration to fix viewbox removing ([686905d](https://github.com/contactlab/ikonograph/commit/686905d))
 
 
 ### Features

@@ -1,6 +1,6 @@
 {
   "name": "ikonograph",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Icons library by Contactlab",
   "main": "./dist/ikonograph.js",
   "files": [
