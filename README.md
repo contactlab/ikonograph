@@ -1,3 +1,5 @@
+## ⚠️  Deprecated
+
 <p align="center"><img src="https://i.imgur.com/9rnoZhX.gif" width="800"></p>
 
 
@@ -5,13 +7,14 @@
 
 Ikonograph is the official Contactlab icons library. You can use it as npm dependency, you have just to import the css file and you can start to add icons everywhere. You can see all available icons [HERE](https://ux.contactlab.com/#/iconography).
 
+- [⚠️ Deprecated](#%E2%9A%A0%EF%B8%8F-deprecated)
 - [Installation](#installation)
 - [Quick use](#quick-use)
-  - [SVG Sprite](#svg-sprite)
-    - [As external resource](#as-external-resource)
-    - [By inclusion (the old way)](#by-inclusion-the-old-way)
-  - [Web Component iconset](#web-component-iconset)
-    - [As js module](#as-js-module)
+    - [SVG Sprite](#svg-sprite)
+        - [As external resource](#as-external-resource)
+        - [By inclusion (the old way)](#by-inclusion-the-old-way)
+    - [Web Component iconset](#web-component-iconset)
+        - [As js module](#as-js-module)
 - [How to use & Documentation](#how-to-use--documentation)
 - [Git branching policies](#git-branching-policies)
 - [License](#license)
