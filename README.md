@@ -1,4 +1,4 @@
-## ⚠️  Deprecated
+:warning: **This project is no longer mantained**
 
 <p align="center"><img src="https://i.imgur.com/9rnoZhX.gif" width="800"></p>
 
